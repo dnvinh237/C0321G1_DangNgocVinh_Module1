@@ -1,0 +1,43 @@
+body{
+    padding: 50px;
+}
+.table1 {
+    padding: 20px;
+    border: 2px solid red;
+    border-collapse: collapse;
+    width: 70%;
+    height: 150px;
+    margin: auto;
+
+}
+.table2 {
+    padding: 20px;
+    border: 2px solid red;
+    border-collapse: collapse;
+    width: 100%;
+    height: 150px;
+}
+.nhom1{
+    float: right;
+}
+th {
+    background: yellowgreen;
+    border-collapse: collapse;
+    border: 2px solid blue;
+    text-align: center;
+}
+td {
+    border-collapse: collapse;
+    border: 2px solid darkmagenta;
+    text-align: left;
+}
+h1 {
+    text-align: center;
+}
+.nhom2{
+    color: blue;
+    padding: 30px;
+}
+.nhom3{
+    background: #d61b06;
+}
