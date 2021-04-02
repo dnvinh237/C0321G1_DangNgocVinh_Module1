@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính</title>
+</head>
+<body>
+<label for="so1"><h1>Caculator</h1></label>
+<br>
+<input type="text" id="so1" placeholder="123">
+<input type="text" id="so2" placeholder="456">
+<br>
+
+<button id="cong" value="cong" onclick="cong()">Cộng</button>
+<button id="tru" value="tru" onclick="tru()">Trừ</button>
+<button id="nhan" value="nhan" onclick="nhan()">Nhân</button>
+<button id="chia" value="chia" onclick="chia()">Chia</button>
+
+<br>
+<p>Kết quả là <span id="kq1"></span></p>
+
+<script>
+    function cong() {
+        let x = parseFloat(document.getElementById("so1").value);
+        let y = parseFloat(document.getElementById("so2").value);
+        let kq = x + y;
+        document.getElementById("kq1").innerHTML = kq;
+    }
+
+    function tru() {
+        let x = parseFloat(document.getElementById("so1").value);
+        let y = parseFloat(document.getElementById("so2").value);
+        let kq = x - y;
+        document.getElementById("kq1").innerHTML = kq;
+    }
+
+    function nhan() {
+        let x = parseFloat(document.getElementById("so1").value);
+        let y = parseFloat(document.getElementById("so2").value);
+        let kq = x * y;
+        document.getElementById("kq1").innerHTML = kq;
+    }
+
+    function chia() {
+        let x = parseFloat(document.getElementById("so1").value);
+        let y = parseFloat(document.getElementById("so2").value);
+        let kq = x / y;
+        document.getElementById("kq1").innerHTML = kq;
+    }
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="amount""></td>
+        <td>
+            <select name="From" id="From" ">
+            <option value="23000">VietNam</option>
+            <option value="1">USA</option>
+            <option value="0.85">Euro</option>
+            </select>
+        </td>
+        <td>
+            <select name="to" id="To"">
+            <option value="1">USA</option>
+            <option value="23000">VietNam</option>
+            <option value="0.85">Euro</option>
+            </select>
+
+        </td>
+    </tr>
+</table>
+<input type="button" onclick="trade()" value="Chuyển Đổi" id="nut">
+<p id="ketqua2">Kết quả là <span id="ketqua1"></span></p>
+
+
+<script>
+    function trade() {
+        let f = document.getElementById("From").value;
+        let t = document.getElementById("To").value;
+        let tg = t / f;
+        let sl = document.getElementById("amount").value;
+        let kq = sl * tg
+        document.getElementById("ketqua1").innerText = kq;
+    }
+
+</script>
+<style>
+    #nut {
+        background: lightgreen;
+        border: 5px solid red;
+        color: lightsalmon;
+    }
+
+    #ketqua2 {
+        color: darkorange;
+    }
+
+    table {
+        border: 0px solid gray;
+        border-collapse: collapse;
+    }
+
+    th {
+        border: 0px solid red;
+    }
+
+    body {
+        padding: 50px 400px;
+    }
+</style>
+</body>
+</html>
