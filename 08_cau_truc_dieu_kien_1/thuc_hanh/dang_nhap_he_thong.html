@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng Nhập Hệ Thống</title>
+</head>
+<body>
+<script>
+    let login = prompt(" Xin vui lòng nhập tên: ");
+    let password;
+    switch (login) {
+        case "Admin":
+            switch (password = prompt("Nhập mật khậu tiếp đi bạn: ")) {
+                case "TheMaster":
+                    alert("Xin chào anh đại");
+                    break;
+                case "null":
+                    alert("Cancel nhé bạn");
+                    break;
+                default:
+                    alert("Sai mật khẩu rồi bạn ơi");
+            }
+            break;
+        case "null":
+            alert("Cancel nhé bạn");
+            break;
+        default:
+        alert("Mình k quen biết gì thì chia tay đi bạn");
+    }
+</script>
+</body>
+</html>

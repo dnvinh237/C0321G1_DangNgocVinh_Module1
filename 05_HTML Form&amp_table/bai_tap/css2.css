@@ -1,4 +1,4 @@
-.table1{
+.table1 {
     background-color: gold;
     border-collapse: collapse;
     width: 40%;
@@ -6,28 +6,34 @@
     margin: auto;
 }
 
-.nhom1:nth-child(odd){
+.nhom1:nth-child(odd) {
     background-color: black;
 }
-.nhom1:nth-child(even){
+
+.nhom1:nth-child(even) {
     background-color: #dddddd;
 }
-.nhom2:nth-child(even){
+
+.nhom2:nth-child(even) {
     background-color: black;
 }
-.nhom2:nth-child(odd){
+
+.nhom2:nth-child(odd) {
     background-color: #dddddd;
 }
-.tieude  {
+
+.tieude {
     margin: auto;
     text-align: center;
     color: blue;
 }
-th{
+
+th {
     background-color: yellow;
     border: 1px solid white;
     color: white;
 }
+
 .table2 {
     background-color: wheat;
     border-collapse: collapse;
@@ -38,24 +44,30 @@ th{
     text-align: center;
     font-size: 30px;
 }
-.nhom3{
+
+.nhom3 {
     border: 4px solid gray;
     background-color: white;
 }
+
 .sun {
     color: red;
 }
+
 .sat {
     color: blue;
     border: 0px;
 }
+
 .cn {
     background-color: red;
 }
+
 .t7 {
     background-color: blue;
 }
-.thu{
+
+.thu {
     background-color: white;
     border: 0px;
 }

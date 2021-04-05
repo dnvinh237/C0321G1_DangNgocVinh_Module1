@@ -9,14 +9,14 @@
     <h1>Market Research Survey</h1>
     <p>Please take a few moments to complete this satisfaction survey.</p>
     <hr>
-    <h3>What is your age range?</h3>
-    <select name="age" id="Age" style="width: 500px">
+    <label for="age"><h3>What is your age range?</h3></label>
+    <select name="age" id="age" style="width: 500px">
         <option value="18-24">18-24</option>
         <option value="25-34">25-34</option>
         <option value="35-50">35-50</option>
         <option value="50+">50+</option>
     </select>
-    <h3>What is your yearly income range?</h3>
+    <label for="income"><<h3>What is your yearly income range?</h3></label>
     <select name="income" id="income" style="width: 500px">
         <option value="0-25000">$0-$25000</option>
         <option value="25001-50000">$25001-$50000</option>
@@ -25,11 +25,11 @@
     </select>
     <h3>Gender Identity</h3>
     <laber><input type="radio" name="gender" value="Male">Male<br></laber>
-    <laber><input type="radio"name="gender" value="Female"> Female<br></laber>
-    <input type="radio"name="gender" value="Nonbinary"> Nonbinary<br>
-    <input type="radio"name="gender" value="Other">Other <br>
-    <input type="text"size="30"><br>
-    <p>Maximum of 250 characters.    Currently Used: 0 characters.</p>
+    <laber><input type="radio" name="gender" value="Female"> Female<br></laber>
+    <input type="radio" name="gender" value="Nonbinary"> Nonbinary<br>
+    <input type="radio" name="gender" value="Other">Other <br>
+    <input type="text" size="30"><br>
+    <p>Maximum of 250 characters. Currently Used: 0 characters.</p>
     <h3>Which of the following products have your purchased in the last 2 months. Please check all that apply.</h3>
     <input type="checkbox"> Product 1 <br>
     <input type="checkbox"> Product 2 <br>
@@ -39,12 +39,12 @@
     <laber><input type="radio" name="buynew" value="weekly"> Weekly <br></laber>
     <laber><input type="radio" name="buynew" value="Monthly"> Monthly <br></laber>
 
-    <h3>What would you pay for the new product?</h3>
-    $ <input type="text" size="10"> . <input type="text" size="2">
-<!--    còn thiếu dollars và cent-->
+    <label for="new"><h3>What would you pay for the new product?</h3></label>
+    $ <input type="text" size="10" id="new"> . <input type="text" size="2">
+    <!--    còn thiếu dollars và cent-->
     <h3>What features would you like to see in the new product.</h3>
     <textarea name="ykien" id="ykienKH" cols="200" rows="10"></textarea>
-<p>Please rate your level of agreement with the following statements.</p>
+    <p>Please rate your level of agreement with the following statements.</p>
     <table border="1">
         <tr>
             <th style="width: 800px"></th>
@@ -79,7 +79,7 @@
     <input type="submit" value="Submit">
     <br><br><br><br><br><br>
 
- </button>
+    </button>
 </form>
 
 </body>
