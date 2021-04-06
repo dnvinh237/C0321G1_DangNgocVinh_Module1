@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SỰ kiện chuột</title>
+</head>
+<body>
+<div>
+    <img src="ball.jpg" alt="lag rồi" id="ball" width="200px" height="200px">
+    <p> Click button to move the ball</p>
+    <input type="button" onclick="move()" value="Click me">
+</div>
+
+<script>
+    let obj = document.getElementById('ball');
+    // obj.style.position = 'relative';
+    // obj.style.left = '0px';
+
+    function init() {
+        obj = document.getElementById('ball');
+        obj.style.position = 'relative';
+        obj.style.left = '0px';
+    }
+
+    function move() {
+        obj.style.left = parseInt(obj.style.left) + 10 + 'px';
+    }
+
+    // alert(parseInt(obj.style.left) + 10 + 'px')
+
+    window.onload = init;
+
+</script>
+</body>
+</html>

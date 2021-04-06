@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cấu trúc điều kiện 2</title>
+</head>
+<body>
+<!--<h4>Bài 1: Chuyển từ độ C sang độ F.</h4>-->
+<!--<script>-->
+<!--    let a = parseFloat(prompt('Nhập vào độ C: '));-->
+<!--    let b = (9 * a /5)  + 32;-->
+<!--    alert(b);-->
+<!--</script>-->
+
+<!--<h4>Bài 2: Chuyển từ mét sang feet:.</h4>-->
+<!--<script>-->
+<!--    let a = parseFloat(prompt('Nhập vào mét: '));-->
+<!--    let b = a * 3.2808;-->
+<!--    alert(b);-->
+<!--</script>-->
+
+<!--<h4>Bài 3: Tính diện tích hình vuông khi biết cạnh a.</h4>-->
+<!--<script>-->
+<!--    let a = parseFloat(prompt('Nhập vào cạnh hình vuông: '));-->
+<!--    let b = a * a;-->
+<!--    alert(b);-->
+<!--&lt;!&ndash;</script>&ndash;&gt;-->
+
+<!--<h4>Bài 4: Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b.</h4>-->
+<!--<script>-->
+<!--    let a = parseFloat(prompt('Nhập vào cạnh a hình chữ nhật: '));-->
+<!--    let b = parseFloat(prompt('Nhập vào cạnh b hình chữ nhật: '));-->
+<!--    let c = a * b;-->
+<!--    alert(c);-->
+<!--</script>-->
+
+<!--<h4>Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.</h4>-->
+<!--<script>-->
+<!--    let a = parseFloat(prompt('Nhập vào cạnh a hình tam giác vuông: '));-->
+<!--    let b = parseFloat(prompt('Nhập vào cạnh b hình tam giác vuông: '));-->
+<!--    let c = a * b / 2;-->
+<!--    alert(c);-->
+<!--</script>-->
+
+
+<!--<h4>Bài 6: Giải phương trình bậc 1.</h4>-->
+<!--<script>-->
+<!--    let a = parseFloat(prompt('Nhập vào số a của phương trình bậc 1: '));-->
+<!--    let b = parseFloat(prompt('Nhập vào số b của phương trình bậc 1: '));-->
+<!--    let c = parseFloat(prompt('Nhập vào số c của phương trình bậc 1: '));-->
+<!--    (a ==0)? alert('Phương trình vô sô nghiệm'):alert( (c - b) / a);-->
+<!--</script>-->
+
+<!--<h4>Bài 7: Giải phương trình bậc 2.</h4>-->
+<!--<script>-->
+<!--    let a = parseFloat(prompt('Nhập vào số a của phương trình bậc 2: '));-->
+<!--    let b = parseFloat(prompt('Nhập vào số b của phương trình bậc 2: '));-->
+<!--    let c = parseFloat(prompt('Nhập vào số c của phương trình bậc 2: '));-->
+<!--    let delta = b * b - 4 * a * c;-->
+<!--    let x1 = (-b + Math.sqrt(delta))/( 2* a);-->
+<!--    let x2 = (-b - Math.sqrt(delta))/( 2* a);-->
+<!--    // alert(q)-->
+<!--    (a == 0)? alert('PT bậc 2 thành PT bậc 1 với nghiệm là x =' + (-c / b)):-->
+<!--    (delta > 0)? alert('PT có 2 nghiệm là ' + x1 + ' và ' + x2 ):-->
+<!--        (delta == 0)? alert('PT có nghiệm kép là ' + x1):-->
+<!--            alert('PT vô nghiệm');-->
+<!--</script>-->
+
+<!--<h4>Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không.-->
+<!--    Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0.</h4>-->
+<!--<script>-->
+<!--    let a = parseFloat(prompt('Nhập vào số tuổi: '));-->
+<!--    (a<= 120 && a >=0)? alert('Tuổi của bạn là ' + a ):alert('Nhập sai rồi bạn ơi');-->
+<!--&lt;!&ndash;</script>&ndash;&gt;-->
+
+<!--<h4>Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác.-->
+<!--    Điều kiện để a,b,c là cạnh của một tam giác là:.</h4>-->
+<!--a,b,c > 0-->
+<!--a + b > c-->
+<!--b + c > a-->
+<!--a + c > b-->
+<!--<script>-->
+<!--    let a = parseFloat(prompt('Nhập vào cạnh a: '));-->
+<!--    let b = parseFloat(prompt('Nhập vào cạnh b: '));-->
+<!--    let c = parseFloat(prompt('Nhập vào cạnh c: '));-->
+<!--    (a > 0 && b > 0 && c >0)? (a + b > c && b + c > a && a +c > b)?-->
+<!--        alert("Đây là 3 cạnh của tam giác"):-->
+<!--        alert("Đây không phải cạnh của tam giác"):-->
+<!--        alert("Đây không phải cạnh của tam giác");-->
+<!--</script>-->
+
+
+<!--<h4>Bài 10: Viết chương trình tính giá điện.</h4>-->
+<!--Biết rằng 100 kWh đầu giá 1000,-->
+<!--từ kWh 101 – 150 giá 1200,-->
+<!--từ kWh 151 – 200 giá 2000,-->
+<!--từ 201 trở lên giá 2500.-->
+<!--<script>-->
+<!--    let a = parseFloat(prompt('Nhập vào số kWh đã sử dụng: '));-->
+<!--    (a <= 100) ? alert(a * 1000) :-->
+<!--        (a <= 150) ? alert(100 * 1000 + (a - 100) * 1200) :-->
+<!--            (a <= 200) ? alert(100 * 1000 + 50 * 1200 + (a - 150) * 2000) :-->
+<!--                alert(100 * 1000 + 50 * 1200 + 50 * 2000 + (a - 200) * 2500);-->
+<!--</script>-->
+
+<!--<h4>Bài 11: Viết chương trình tính thuế thu nhập cá nhân.</h4>-->
+<!--Bậc 1: 4 triệu đồng/tháng 0%;-->
+<!--Bậc 2: Trên 4 - 6 triệu đồng/tháng: 5%;-->
+<!--Bậc 3: Trên 6 - 9 triệu đồng: 10%;-->
+<!--Bậc 4: Trên 9 - 14 triệu đồng/tháng: 15%;-->
+<!--Bậc 5: trên 14 triệu đồng/tháng: 20%;-->
+<!--<script>-->
+<!--    let a = parseFloat(prompt('Nhập vào thu nhập cá nhân: '));-->
+<!--    let x-->
+<!--    (a <= 4) ? x = 0 :-->
+<!--        (a <= 6) ? x = 5 :-->
+<!--            (a <= 9) ? x = 10 :-->
+<!--                (a <= 14) ? x = 15 :-->
+<!--                    x = 20;-->
+<!--    let thue = (a * x) / 100-->
+<!--    alert('Số thuế của bạn là ' + thue + ' triệu đồng');-->
+<!--</script>-->
+
+<h4>Bài 12: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con)
+    khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.</h4>
+<script>
+    let a = parseFloat(prompt('Nhập vào số tiền ban đầu: '));
+    let b = parseFloat(prompt('Nhập vào số năm cho vay: '));
+    let c = parseFloat(prompt('Nhập vào lãi suất hàng năm: ví dụ: 0.07'));
+    let kq = a * Math.pow((1 + c), b);
+    alert(kq);
+</script>
+
+</body>
+</html>

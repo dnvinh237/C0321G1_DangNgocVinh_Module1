@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cau lenh switch case</title>
+</head>
+<body>
+<input type="text" id="month">
+<button onclick="tinh()"> Tính số ngày</button>
+<p>Tháng <span id="kq1"></span> có <span id="kq2"></span> ngày</p>
+<script>
+    function tinh() {
+        let thang = parseInt(document.getElementById('month').value);
+        let ngay;
+        switch (thang) {
+            case 2:
+                ngay = 28;
+                document.getElementById('kq2').innerText = ngay;
+                document.getElementById('kq1').innerText = thang;
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                ngay = 30;
+                document.getElementById('kq2').innerText = ngay;
+                document.getElementById('kq1').innerText = thang;
+                break;
+            default:
+                ngay = 31;
+                document.getElementById('kq2').innerText = ngay;
+                document.getElementById('kq1').innerText = thang;
+                break;
+        }
+    }
+
+    // 31 ngày : 1 3 5 7 8 10 12;
+    // 30 ngày : 4 6 9 11
+    // 28 ngày : 2
+</script>
+
+</body>
+</html>

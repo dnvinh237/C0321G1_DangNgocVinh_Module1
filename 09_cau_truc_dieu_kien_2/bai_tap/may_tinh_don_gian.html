@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+</head>
+<body>
+<!--<input type="text" id="manhinh">-->
+<tr>
+    <td colspan="4" style="padding-right: 100px ">Click nhập số vào bạn ơi: <span id="manhinh"></span></td>
+</tr>
+<table>
+    <tr>
+        <td>
+            <button id="so1" onclick="so1()" value="1">1</button>
+        </td>
+        <td>
+            <button id="so2" onclick="so2()" value="2">2</button>
+        </td>
+        <td>
+            <button id="so3" onclick="so3()" value="3">3</button>
+        </td>
+        <td>
+            <button id="phepcong" onclick="phepcong()" value="+">+</button>
+        </td>
+
+    </tr>
+    <tr>
+        <td>
+            <button id="so4" onclick="so4()" value="4">4</button>
+        </td>
+        <td>
+            <button id="so5" onclick="so5()" value="5">5</button>
+        </td>
+        <td>
+            <button id="so6" onclick="so6()" value="6">6</button>
+        </td>
+        <td>
+            <button id="pheptru" onclick="pheptru()" value="-">-</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button id="so7" onclick="so7()" value="7">7</button>
+        </td>
+        <td>
+            <button id="so8" onclick="so8()" value="8">8</button>
+        </td>
+        <td>
+            <button id="so9" onclick="so9()" value="9">9</button>
+        </td>
+        <td>
+            <button id="phepnhan" onclick="phepnhan()" value="*">*</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="reset" id="nutc" onclick="nutc()" value="c">C</button>
+        </td>
+        <td>
+            <button id="so0" onclick="so0()" value="0">0</button>
+        </td>
+        <td>
+            <button id="tinhtoan" onclick="tinhtoan()" value="=">=</button>
+        </td>
+        <td>
+            <button id="phepchia" onclick="phepchia()" value="/">/</button>
+        </td>
+    </tr>
+</table>
+
+<script>
+    // let x;
+    function so1() {
+        let x = document.getElementById('so1').value;
+        document.getElementById('manhinh').innerText += x;
+    }
+
+    function so2() {
+        let x = document.getElementById('so2').value;
+        document.getElementById('manhinh').innerText += x;
+    }
+
+    function so3() {
+        let x = document.getElementById('so2').value;
+        document.getElementById('manhinh').innerText += x;
+    }
+
+    function so4() {
+        let x = document.getElementById('so4').value;
+        document.getElementById('manhinh').innerText += x;
+    }
+
+    function so5() {
+        let x = document.getElementById('so5').value;
+        document.getElementById('manhinh').innerText += x;
+    }
+
+    function so6() {
+        let x = document.getElementById('so6').value;
+        document.getElementById('manhinh').innerText += x;
+    }
+
+    function so7() {
+        let x = document.getElementById('so7').value;
+        document.getElementById('manhinh').innerText += x;
+    }
+
+    function so8() {
+        let x = document.getElementById('so8').value;
+        document.getElementById('manhinh').innerText += x;
+    }
+
+    function so9() {
+        let x = document.getElementById('so9').value;
+        document.getElementById('manhinh').innerText += x;
+    }
+
+    function so0() {
+        let x = document.getElementById('so0').value;
+        document.getElementById('manhinh').innerText += x;
+    }
+
+    function phepcong() {
+        let x = document.getElementById('phepcong').value;
+        document.getElementById('manhinh').innerText += x;
+    }
+
+    function pheptru() {
+        let x = document.getElementById('pheptru').value;
+        document.getElementById('manhinh').innerText += x;
+    }
+
+    function phepnhan() {
+        let x = document.getElementById('phepnhan').value;
+        document.getElementById('manhinh').innerText += x;
+    }
+
+    function phepchia() {
+        let x = document.getElementById('phepchia').value;
+        document.getElementById('manhinh').innerText += x;
+    }
+
+    function nutc() {
+        document.getElementById('manhinh').innerText = ' ';
+        document.getElementById('kq1').innerText = ' ';
+    }
+
+    function tinhtoan() {
+        let kq = eval(document.getElementById('manhinh').innerText);
+        document.getElementById('manhinh').innerText = kq;
+    }
+</script>
+<style>
+    button {
+        margin: 10px;
+        color: blue;
+        padding: 20px;
+    }
+</style>
+</body>
+</html>

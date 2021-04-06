@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Can nang co the</title>
+</head>
+<body>
+<script>
+    let weight = parseFloat(prompt(" input weight:"));
+    let height = parseFloat(prompt(" input height:"));
+    let bmi = weight / (height * height);
+    (bmi >= 30) ?
+        alert('obese') : (bmi >= 25) ?
+        alert('Overweight') : (bmi >= 18.5) ?
+            alert('Normal') : alert('Undwerweight')
+</script>
+</body>
+</html>

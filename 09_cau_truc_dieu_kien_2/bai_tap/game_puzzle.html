@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game puzzle</title>
+</head>
+<body id="body">
+<img src="apple1.png" id="hinh1" onclick="hinh1()" style="top:0px;left: 0px; position: absolute" width="100px"
+     height="100px"><br>
+<img src="apple2.png" id="hinh2" onclick="hinh2()" style="top: 200px;left: 0px; position: absolute" width="100px"
+     height="100px"><br>
+<img src="apple3.jpg" id="hinh3" onclick="hinh3()" style="top: 400px;left: 0px; position: absolute" width="100px"
+     height="100px"><br>
+
+<img src="codegym.png" id="hinh4" onclick="hinh1()" style="top:10px; left: -300px; position: absolute" width="100px"
+     height="100px"><br>
+<img src="fb.png" id="hinh5" onclick="hinh2()" style="top: 200px;left: -300px; position: absolute" width="100px"
+     height="100px"><br>
+<img src="sleep.jpg" id="hinh6" onclick="hinh3()" style="top: 400px;left: -300px; position: absolute" width="100px"
+     height="100px"><br>
+
+<script>
+    x1 = document.getElementById('hinh1');
+    x2 = document.getElementById('hinh2');
+    x3 = document.getElementById('hinh3');
+    x4 = document.getElementById('hinh4');
+    x5 = document.getElementById('hinh5');
+    x6 = document.getElementById('hinh6');
+    let body = document.getElementById("body");
+
+    function hinh1() {
+        if (x1.style.left == '0px') {
+            x1.style.left = '-300px';
+            x4.style.left = '0px';
+        } else {
+            x1.style.left = '0px';
+            x4.style.left = '-300px';
+        }
+        (x1.style.left == '0px' && x2.style.left == '0px' && x3.style.left == '0px') ? body.style.background = 'lightblue' :
+            (x4.style.left == '0px' && x5.style.left == '0px' && x6.style.left == '0px') ? body.style.background = 'lightyellow' :
+                body.style.background = 'white';
+
+
+    }
+
+    function hinh2() {
+        // alert(x1.style.left)
+        if (x2.style.left == '0px') {
+            x2.style.left = '-300px';
+            x5.style.left = '0px';
+        } else {
+            x2.style.left = '0px';
+            x5.style.left = '-300px';
+        }
+        (x1.style.left == '0px' && x2.style.left == '0px' && x3.style.left == '0px') ? body.style.background = 'lightblue' :
+            (x4.style.left == '0px' && x5.style.left == '0px' && x6.style.left == '0px') ? body.style.background = 'lightyellow' :
+                body.style.background = 'white';
+
+    }
+
+    function hinh3() {
+        // alert(x1.style.left)
+        if (x3.style.left == '0px') {
+            x3.style.left = '-300px';
+            x6.style.left = '0px';
+        } else {
+            x3.style.left = '0px';
+            x6.style.left = '-300px';
+        }
+        (x1.style.left == '0px' && x2.style.left == '0px' && x3.style.left == '0px') ? body.style.background = 'lightblue' :
+            (x4.style.left == '0px' && x5.style.left == '0px' && x6.style.left == '0px') ? body.style.background = 'lightyellow' :
+                body.style.background = 'white';
+
+    }
+
+
+</script>
+</body>
+</html>
