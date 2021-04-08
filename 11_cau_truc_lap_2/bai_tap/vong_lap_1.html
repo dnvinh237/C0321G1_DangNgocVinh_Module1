@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vòng lặp 1</title>
+</head>
+<body>
+<!--<h3>Bài 1: Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn thành.</h3>-->
+<!--<script>-->
+<!--    for( let n=1; n<=100;n++){-->
+<!--        document.write(n +'<br>');-->
+<!--        if (n==99){-->
+<!--            alert(' Đã hoàn thành');-->
+<!--            break;-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+
+<!--<h3>Bài 2: Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập.-->
+<!--    Nếu nhiệt độ nhập vào trên 100, yêu cầu người dùng giảm nhiệt độ.-->
+<!--    Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.</h3>-->
+<!--( Nhập 30 sẽ thoát vòng lặp)-->
+<!--<script>-->
+<!--    let a = parseInt(prompt('Nhập nhiệt độ (30 để thoát vòng lập): '));-->
+<!--    for (;a!=30;){-->
+<!--       if (a >=100) {-->
+<!--           alert('Giảm nhiệt độ')-->
+<!--       } else if (a <=20){-->
+<!--           alert("tăng nhiệt độ")-->
+<!--       }-->
+<!--           a = parseInt(prompt('Nhập nhiệt độ mới:'))-->
+<!--    }-->
+<!--&lt;!&ndash;</script>&ndash;&gt;-->
+
+<!--<h3>Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên.</h3>-->
+
+<!--<script>-->
+<!--    let count = 0;-->
+<!--    let x = 0;-->
+<!--    let y = 1;-->
+<!--    let tong = x + y;-->
+<!--    for (; count < 20; count++) {-->
+<!--        tong = x + y;-->
+<!--        y = x;-->
+<!--        x = tong;-->
+<!--        document.write(tong + "<br>");-->
+<!--    }-->
+<!--</script>-->
+
+<h3>Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.</h3>
+<script>
+    let x = 0;
+    let y = 1;
+    let tong = x + y;
+    for (; ;) {
+        tong = x + y;
+        y = x;
+        x = tong;
+        if (tong % 5 == 0) {
+            alert(tong);
+            break;
+        }
+    }
+</script>
+
+<!--<h3>Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci.</h3>-->
+
+<!--<script>-->
+
+<!--    let count = 0;-->
+<!--    let x = 0;-->
+<!--    let y = 1;-->
+<!--    let tong = x + y;-->
+<!--    let total = 0;-->
+<!--    for (; count < 20; count++) {-->
+<!--        tong = x + y;-->
+<!--        y = x;-->
+<!--        x = tong;-->
+<!--        document.write(tong + "<br>");-->
+<!--        total += tong;-->
+<!--    }-->
+<!--    alert(total)-->
+
+<!--</script>-->
+
+<!--<h3>Bài 6: Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên.</h3>-->
+
+<!--<script>-->
+<!--    let total = 0;-->
+<!--    let count = 30;-->
+<!--    let i = 1;-->
+<!--        for (let n = 1;i <=count;){-->
+<!--            n++-->
+<!--            if (n%7==0){-->
+<!--                total= total+ n;-->
+<!--                i++-->
+<!--            }-->
+<!--        }-->
+<!--    alert(total)-->
+<!--</script>-->
+
+<!--<h3>Bài 7: Hãy viết một chương trình in ra các số từ 1 đến 100. Nhưng nếu số chia hết cho 3 thì in ra "Fizz",-->
+<!--    5 thì in ra "Buzz" thay vì in ra số đó. Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz".</h3>-->
+
+<!--<script>-->
+<!--    let count = 1;-->
+<!--    while (count <= 100) {-->
+<!--        (count % 3 == 0 && count % 5 == 0) ? document.write('FizzBuzz'+'<br>') :-->
+<!--            (count % 3 == 0) ? document.write('Fizz'+'<br>') :-->
+<!--                (count % 5 == 0) ? document.write('Buzz'+'<br>') :-->
+<!--                    document.write(count+'<br>');-->
+<!--        count++;-->
+<!--    }-->
+<!--</script>-->
+<!--<h3>Bài 8: Game đoán số</h3>-->
+
+<!--<script>-->
+<!--    let count = 1;-->
+<!--    let min = parseInt(prompt('Nhập vào số thứ nhất: '));-->
+<!--    let max = parseInt(prompt('Nhập vào số thứ hai: '));-->
+<!--    let floor = max - min + 1;-->
+<!--    let random = Math.floor(Math.random() * floor) + min;-->
+<!--    // alert(random)-->
+<!--    while (count <= 3) {-->
+<!--        let guess = parseInt(prompt('Nhập giá trị muốn đoán: '));-->
+<!--        if (guess == random) {-->
+<!--            alert('Xin chúc mừng');-->
+<!--            break;-->
+<!--        } else if (guess > random) {-->
+<!--            alert('Lớn hơn rồi bạn ơi')-->
+<!--            count++;-->
+<!--        } else {-->
+<!--            alert('Nhỏ hơn rồi bạn ơi')-->
+<!--            count++;-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+</body>
+</html>

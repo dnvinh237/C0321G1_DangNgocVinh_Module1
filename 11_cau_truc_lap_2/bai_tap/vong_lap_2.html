@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vòng lặp 2</title>
+</head>
+<body>
+<!--<h3>Bài 1: In dãy Finonaci</h3>-->
+<!--<script>-->
+<!--    let count = 0;-->
+<!--    let x = 0;-->
+<!--    let y = 1;-->
+<!--    let tong = x + y;-->
+<!--    for (; count < 10; count++) {-->
+<!--        tong = x + y;-->
+<!--        y = x;-->
+<!--        x = tong;-->
+<!--        document.write(tong + "<br>");-->
+<!--    }-->
+<!--</script>-->
+
+<!--<h3>Bài 2: Tính giai thừa của một số nguyên dương</h3>-->
+<!--<script>-->
+<!--    let num = parseInt(prompt('Nhập vào số nguyên dương: '));-->
+<!--    let i = 1;-->
+<!--    let result = 1;-->
+<!--    while (i <= num){-->
+<!--        result = result *i;-->
+<!--        i++;-->
+<!--    }-->
+<!--    alert(result);-->
+
+<!--</script>-->
+
+<!--<h3>Bài 3: In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau hình 1</h3>-->
+<!--<script>-->
+<!--    let i = 1;-->
+<!--    let n = 5;-->
+<!--    let star ="*"-->
+<!--    let star1 = '*'-->
+<!--    while (i <= n){-->
+<!--        document.write( star+ '<br>')-->
+<!--        i++;-->
+<!--        star+=star1;-->
+<!--    }-->
+<!--</script>-->
+
+<!--<h3>Bài 3: In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau hình 2</h3>-->
+<!--    <script>-->
+<!--    let i = 5;-->
+<!--    let n = 1;-->
+<!--    let star ="*****"-->
+<!--    while (i >= n){-->
+<!--        document.write(star.substr(0,[i])+ '<br>')-->
+<!--        i&#45;&#45;;-->
+<!--    }-->
+<!--</script>-->
+
+<!--<h3>Bài 3: In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau hình 3</h3>-->
+<!--<script>-->
+<!--    let i1 = 1;-->
+<!--    let n1 = 5;-->
+<!--    let i = 4;-->
+<!--    let n = 0;-->
+<!--    let star = "*";-->
+<!--    let space = '&nbsp;&nbsp;';-->
+<!--    while (i >= n && i1 <= n1) {-->
+<!--        document.write(space.repeat(i)+ star.repeat(i1)+'<br>');-->
+<!--        i1++;-->
+<!--        i&#45;&#45;;-->
+<!--    }-->
+<!--</script>-->
+
+<!--<h3>Bài 3: In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau hình 4</h3>-->
+<!--<script>-->
+<!--    let i1 = 5;-->
+<!--    let n1 = 1;-->
+<!--    let i = 0;-->
+<!--    let n = 4;-->
+<!--    let star = "*";-->
+<!--    let space = '&nbsp;&nbsp;';-->
+<!--    while (i <= n && i1 >= n1) {-->
+<!--        document.write(space.repeat(i)+ star.repeat(i1)+'<br>');-->
+<!--        i1&#45;&#45;;-->
+<!--        i++;-->
+<!--    }-->
+<!--</script>-->
+
+<!--<h3>Bài 4: In hình chữ nhật</h3>-->
+<!--<script>-->
+<!--    let i = 1;-->
+<!--    let n = 1;-->
+<!--    let star = "*";-->
+<!--    let space = '&nbsp;&nbsp;';-->
+<!--    while (i <= 2) {-->
+<!--        document.write(star.repeat(22) + '<br>');-->
+<!--        while (n <= 5) {-->
+<!--            document.write(star + space.repeat(20) + star + '<br>');-->
+<!--            n++;-->
+<!--        }-->
+<!--        i++;-->
+<!--    }-->
+<!--// </script>-->
+<!--<h3>Bài 5: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lại con) khi biết số tiền ban đầu,-->
+<!--    số tháng cho vay và lãi xuất hàng tháng.</h3>-->
+<!--<script>-->
+<!--    let amount = parseInt(prompt('Nhập vào số tiền ban đầu:'));-->
+<!--    let n = parseInt(prompt('Nhập vào số tháng:'));-->
+<!--    let r = parseFloat(prompt('Nhập vào lãi suất:'));-->
+<!--    let result = amount;-->
+<!--    let i = 1;-->
+<!--    while (i <= n) {-->
+<!--        result =result*(1 + r);-->
+<!--        i++;-->
+<!--    }-->
+<!--    alert(result);-->
+
+<!--</script>-->
+
+<h3>Bài 6: In hình trái tim</h3>
+<!--document.write(space.repeat(a)+star+space.repeat(b)+star+space.repeat(c)+star+space.repeat(b)+star+'<br>');-->
+<script>
+    let star = "*";
+    let space = '&nbsp;&nbsp;'
+    let a = 20;
+    let b = 20;
+    let c = 8;
+    let line1 = 1;
+    let line2 = 1;
+    let line3 = 1;
+    while (line1 <= 5) {
+        document.write(space.repeat(a) + star.repeat(c) + space.repeat(b) + star.repeat(c) + '<br>')
+        a = a - 2;
+        b = b - 4;
+        c = c + 4;
+        line1++;
+    }
+    while (line2 <= 3) {
+        document.write(space.repeat(10) + star.repeat(55) + '<br>');
+        line2++;
+    }
+    let x = 11;
+    let y = 53;
+    while (line3 <= 10) {
+        document.write(space.repeat(x) + star.repeat(y) + '<br>');
+        y = y - 4;
+        x = x + 2;
+    }
+
+
+</script>
+
+
+</body>
+</html>
