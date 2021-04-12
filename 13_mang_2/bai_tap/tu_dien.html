@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tu dien</title>
+</head>
+<body>
+<script>
+    let arr1 = ['one', 'two', 'three', 'four'];
+    let arr2 = ['mot', 'hai', 'ba', 'bon'];
+    let input = prompt('Nhập vào từ muốn tìm: ');
+    let i = 0;
+    let check = false;
+    while (i < arr1.length) {
+        if (input == arr1[i]) {
+            document.write(arr2[i]);
+            check = true;
+        }
+        i++;
+    }
+    if (!check) {
+        document.write('Khong tim thay');
+    }
+
+
+</script>
+</body>
+</html>
