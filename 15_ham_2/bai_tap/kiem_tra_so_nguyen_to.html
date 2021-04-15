@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nguyên tố</title>
+</head>
+<body>
+<script>
+    function isPrime(num) {
+        if (num <2){
+            return false;
+        }
+        for (let i = 2; i <= Math.sqrt(num); i++)
+            if (num % i == 0) {
+                return false;
+            }
+        return true;
+    }
+
+    let num = parseInt(prompt("Nhập vào số muốn kiểm tra: "));
+    let kq = isPrime(num);
+    alert(kq);
+</script>
+</body>
+</html>

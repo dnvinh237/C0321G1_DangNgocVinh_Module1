@@ -129,32 +129,32 @@
 <!--</script>-->
 
 
-<!--<h3>Bài 7- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử,-->
-<!--    nhập/tạo phần tử số nguyên V. Chương trình kiểm tra xem V có thuộc mảng đã cho không,-->
-<!--    nếu V thuộc mảng đã cho xoá V khỏi mảng-->
-<!--    (Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V,-->
-<!--    và gán 0 cho phần tử cuối cùng của mảng)</h3>-->
-<!--<script>-->
-<!--    let arr = [];-->
-<!--    let j = 10;-->
-<!--    for (let i = 0; i < 10; i++) {-->
-<!--        arr[i] = j;-->
-<!--        j = j - 3;-->
-<!--    }-->
-<!--    document.writeln(arr.toString()+'<br>')-->
-<!--    let a = prompt('Nhập vào số V: ');-->
-<!--    let b = parseInt(a);-->
-<!--    let check = false;-->
-<!--    for (let x = 0; x < arr.length; x++) {-->
-<!--        if (b == arr[x]) {-->
-<!--            for (;x<arr.length;x++){-->
-<!--                arr[x] = arr[x+1];-->
-<!--            }-->
-<!--        arr[arr.length-1]=0-->
-<!--        }-->
-<!--    }-->
-<!--    document.writeln(arr.toString()+'<br>')-->
-<!--</script>-->
+<h3>Bài 7- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử,
+    nhập/tạo phần tử số nguyên V. Chương trình kiểm tra xem V có thuộc mảng đã cho không,
+    nếu V thuộc mảng đã cho xoá V khỏi mảng
+    (Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V,
+    và gán 0 cho phần tử cuối cùng của mảng)</h3>
+<script>
+    let arr = [];
+    let j = 10;
+    for (let i = 0; i < 10; i++) {
+        arr[i] = j;
+        j = j - 3;
+    }
+    alert(arr)
+    document.writeln(arr.toString()+'<br>')
+    let a = prompt('Nhập vào số V: ');
+    let b = parseInt(a);
+    for (let x = 0; x < arr.length; x++) {
+        if (b == arr[x]) {
+            for (;x<arr.length;x++){
+                arr[x] = arr[x+1];
+            }
+        arr[arr.length-1]=0;
+        }
+    }
+    document.writeln(arr.toString()+'<br>')
+</script>
 <!--<h3>Bài 8- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử.-->
 <!--    Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.</h3>-->
 <!--<script>-->
@@ -189,28 +189,28 @@
 <!--    document.writeln(arr1.toString())-->
 <!--</script>-->
 
-<h3>Bài 9- Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm 10 phần tử, gọi là mảng a và b.
-    Mảng c là một mảng được khai báo gồm 20 phần tử số nguyên.
-    Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c. Hiển thị mảng c.</h3>
-<script>
-    let arr = [];
-    let j = 10;
-    for (let i = 0; i < 10; i++) {
-        arr[i] = j;
-        j = j - 3;
-    }
+<!--<h3>Bài 9- Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm 10 phần tử, gọi là mảng a và b.-->
+<!--    Mảng c là một mảng được khai báo gồm 20 phần tử số nguyên.-->
+<!--    Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c. Hiển thị mảng c.</h3>-->
+<!--<script>-->
+<!--    let arr = [];-->
+<!--    let j = 10;-->
+<!--    for (let i = 0; i < 10; i++) {-->
+<!--        arr[i] = j;-->
+<!--        j = j - 3;-->
+<!--    }-->
 
-    let arr1 = ['a', 'b', 'c', 1, 2, 3, 4, 5, 6, 'v'];
-    let arr2 = [];
-    document.writeln(arr + '<br>');
-    document.writeln(arr1 + '<br>')
-    for (let i = 0; i < arr.length; i++) {
-        arr2.push(arr[i]);
-        arr2.push(arr1[i]);
-    }
-    document.writeln(arr2.toString());
+<!--    let arr1 = ['a', 'b', 'c', 1, 2, 3, 4, 5, 6, 'v'];-->
+<!--    let arr2 = [];-->
+<!--    document.writeln(arr + '<br>');-->
+<!--    document.writeln(arr1 + '<br>')-->
+<!--    for (let i = 0; i < arr.length; i++) {-->
+<!--        arr2.push(arr[i]);-->
+<!--        arr2.push(arr1[i]);-->
+<!--    }-->
+<!--    document.writeln(arr2.toS
+//</script>tring());-->
 
-</script>
-8h55
+
 </body>
 </html>

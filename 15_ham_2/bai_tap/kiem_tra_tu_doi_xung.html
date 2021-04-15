@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<h3>Cách 1</h3>-->
+<!--<script>-->
+<!--    function isPalindrome(arr) {-->
+<!--        let check = true;-->
+<!--        for (let i = 0; i <= arr.length / 2; i++) {-->
+<!--            if (arr[i] == arr[arr.length - i - 1]) {-->
+<!--                check = true;-->
+<!--            } else {-->
+<!--                check = false;-->
+<!--                return check;-->
+<!--            }-->
+<!--        }-->
+<!--        return check;-->
+<!--    }-->
+<!--    let arr = [1, 2, 3, 4, 3, 2, 1]-->
+<!--    let result = isPalindrome(arr)-->
+<!--    alert(result);-->
+<!--</script>-->
+
+
+<h3>Cách 2: Dùng đệ quy</h3>
+<script>
+    let arr = [1, 2, 3, 4, 3, 2, 1];
+    let result = isPalindrome(arr);
+    alert(result);
+
+    function isPalindrome(arr) {
+        let check = true;
+        if (arr.length == 0) {
+            check = true;
+            return check;
+        }
+        if (arr[0] != arr[arr.length - 1]) {
+            check = false;
+            // alert(check);
+            return check;
+        } else {
+            arr = arr.slice(1, arr.length - 1)
+            return isPalindrome(arr);
+        }
+    }
+</script>
+</body>
+</html>

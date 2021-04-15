@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi feet và Metter</title>
+</head>
+<body>
+<script>
+
+    function feetToMetter(feet) {
+        return feet * 0.305;
+    }
+
+    function metterToFeet(Metter) {
+        return Metter * 3.279;
+    }
+
+    for (let i = 1; i <= 10; i++) {
+        let result = feetToMetter(i);
+        document.writeln(i + '<br>');
+        document.writeln(result + '<br>');
+    }
+    document.writeln("<hr>")
+    for (let i = 20; i <=65; i+=5) {
+        let result = metterToFeet(i);
+        document.writeln(i + '<br>');
+        document.writeln(result + '<br>');
+    }
+</script>
+</body>
+</html>

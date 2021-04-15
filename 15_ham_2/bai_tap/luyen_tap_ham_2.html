@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen Tap Ham 2</title>
+</head>
+<body>
+<!--<h3>Bài 1: Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.</h3>-->
+<!--<script>-->
+<!--    function square(num) {-->
+<!--        return num*num;-->
+<!--    }-->
+<!--    let num = parseInt(prompt('Nhập vào số muốn bình phương: '));-->
+<!--    let result = square(num);-->
+<!--    alert(result);-->
+<!--</script>-->
+
+<!--<h3>Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được</h3>-->
+<!--<script>-->
+<!--    const pi = 3.14;-->
+<!--    function area(num) {-->
+<!--        return num*2*pi;-->
+<!--    }-->
+<!--    let num = parseInt(prompt('Nhập vào số muốn bình phương: '));-->
+<!--    let result = area(num);-->
+<!--    alert(result);-->
+<!--</script>-->
+
+<!--<h3>Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.</h3>-->
+<!--<script>-->
+<!--    function factorial(num) {-->
+<!--        if (num==0){-->
+<!--            return 1;-->
+<!--        }-->
+<!--        let result = 1;-->
+<!--        for (let i = 2; i <= num; i++) {-->
+<!--            result = result*i;-->
+<!--        }-->
+<!--        return result;-->
+<!--    }-->
+
+<!--    let num = parseInt(prompt('Nhập vào số muốn bình phương: '));-->
+<!--    let result = factorial(num);-->
+<!--    alert(result);-->
+<!--</script>-->
+
+<!--<h3>Bài 4: Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không.-->
+<!--    Nếu là ký tự số hàm trả về true, ngược lại trả về false.</h3>-->
+<!--&lt;!&ndash;<input type="text" id="input" oninput="input()">&ndash;&gt;-->
+<!--<script>-->
+<!--    // function isNum(str) {-->
+<!--    //-->
+<!--    // }-->
+
+<!--    let str =prompt('Nhập vào số muốn bình phương: ');-->
+<!--    let x=parseInt(str)-->
+<!--    alert(typeof x)-->
+<!--    alert(x)-->
+<!--    function input(){-->
+<!--        let x = document.getElementById('input').value;-->
+<!--        alert(typeof x)-->
+<!--        alert(x)-->
+<!--    }-->
+
+<!--    // let result = isNum(str);-->
+<!--    // alert(result);-->
+<!--</script>-->
+
+<!--<h3>Bài 5: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.</h3>-->
+<!--<button onclick="min()"> Click để nhập</button>-->
+
+<!--<script>-->
+<!--    function min(a, b, c) {-->
+<!--        a = parseInt(prompt('Nhập vào số thứ 1: '));-->
+<!--        b = parseInt(prompt('Nhập vào số thứ 2: '));-->
+<!--        c = parseInt(prompt('Nhập vào số thứ 3: '));-->
+<!--        (a < b) ? (a < c) ?-->
+<!--            alert('thứ 1 nhỏ nhất: ' + a) :-->
+<!--            alert('thứ 3 nhỏ nhất: ' + c) : (b > c) ?-->
+<!--            alert('thứ 3 nhỏ nhất: ' + c) :-->
+<!--            alert('thứ 2 nhỏ nhất: ' + b)-->
+<!--    }-->
+
+<!--</script>-->
+
+
+<!--<h3>Bài 6: Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không.-->
+<!--    Nếu là nguyên dương trả về true, ngược lại trả về false.</h3>-->
+<!--<script>-->
+<!--    function min(num) {-->
+<!--        if (num > 0) {-->
+<!--            return true;-->
+<!--        } else {-->
+<!--            return false;-->
+<!--        }-->
+<!--    }-->
+
+<!--    let num = parseInt(prompt('Nhập vào số muốn kiểm tra: '))-->
+<!--    let result = min(num);-->
+<!--    alert(result)-->
+
+<!--</script>-->
+
+
+<!--<h3>Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.</h3>-->
+<!--<script>-->
+<!--    function swap(num1,num2) {-->
+<!--        let num3 = 0;-->
+<!--        let arr1 = [num1,num2]-->
+<!--        num3 = arr1[0];-->
+<!--        arr1[0] = arr1[1];-->
+<!--        arr1[1] = num3;-->
+<!--        return arr1;-->
+<!--    }-->
+<!--    let arr = new Array(2);-->
+<!--    arr[0] = parseInt(prompt('Nhập vào số nguyên thứ 1: '))-->
+<!--    arr[1] = parseInt(prompt('Nhập vào số nguyên thứ 2: '))-->
+<!--    let arr2 = swap(arr[0],arr[1]);-->
+<!--    alert(arr2)-->
+<!--</script>-->
+
+<!--<h3>Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.</h3>-->
+<!--<script>-->
+<!--    function reverse(arr) {-->
+<!--        arr.reverse()-->
+<!--        return arr;-->
+<!--    }-->
+<!--    let arr = new Array(3);-->
+<!--    arr[0] = parseInt(prompt('Nhập vào số nguyên thứ 1: '))-->
+<!--    arr[1] = parseInt(prompt('Nhập vào số nguyên thứ 2: '))-->
+<!--    arr[2] = parseInt(prompt('Nhập vào số nguyên thứ 3: '))-->
+<!--    let arr2 = reverse(arr);-->
+<!--    alert(arr2)-->
+<!--</script>-->
+
+<h3>Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ,
+    kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không.
+    Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.</h3>
+<script>
+    function check(arr, str) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (str == arr[i]) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    let arr = [];
+    for (let i = 0; i < 5; i++) {
+        arr[i] = prompt('Nhập phần từ thứ ' + i)
+    }
+    let str = prompt('Nhập ký tự muốn kiểm tra: ')
+    let result = check(arr, str);
+    (result == 0) ? alert('không có bạn nhé -1 đây') : alert(result);
+</script>
+</body>
+</html>
