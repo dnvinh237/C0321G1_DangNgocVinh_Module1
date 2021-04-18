@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adam & Eva</title>
+</head>
+<body>
+<script>
+    let Apple = function () {
+        // weight=10;
+        status = true;
+        this.weight = 10;
+        this.status = true;
+        this.decrese = function () {
+            this.weight--;
+        }
+
+
+    }
+    let Human = function (name, gender, weight) {
+        this.name = name;
+        this.gender = gender;
+        this.weight = weight;
+        this.say = function (humanText) {
+            console.log(humanText)
+        }
+        this.isMale = function (human) {
+            console.log(human.gender)
+        }
+        this.setGender = function (human) {
+            human.gender = gender;
+        }
+        this.getName = function (human) {
+            console.log(human.name)
+        }
+        this.eat = function (apple) {
+            if (apple.weight > 0) {
+                this.weight++;
+                apple.decrese();
+            } else {
+                this.say('Hết táo rồi bạn ơi');
+            }
+        }
+        this.checkApple = function (apple) {
+            console.log(apple.status);
+        }
+        this.getWeight = function (apple) {
+            console.log(apple.weight);
+        }
+
+        this.isEmpty = function (apple) {
+            if (apple.weight != 0) {
+                apple.status = true;
+                console.log(apple.status);
+            } else {
+                apple.status = false;
+                console.log(apple.status);
+            }
+        }
+
+    }
+    let human1 = new Human('Vinh', 'Nam', 70);
+    let human2 = new Human('Code', 'Nữ', 55)
+    let apple1 = new Apple();
+    human1.getName(human2);
+    human2.getName(human1);
+    human1.getWeight(human2)
+    human2.getWeight(human1)
+    human1.isMale(human2);
+    human2.isMale(human1);
+
+    human1.checkApple(apple1);
+    human1.getWeight(apple1);
+    human1.isEmpty(apple1);
+    for (let i = 0; i < 6; i++) {
+        for (let j = 0; j < 2; j++) {
+            if (j == 0) {
+                human1.eat(apple1);
+            } else {
+                human2.eat(apple1);
+            }
+        }
+    }
+    human1.say('Táo ngon không bạn.')
+    human2.say('Táo ngon lắm bạn.')
+
+    console.log(human1.weight)
+    console.log(human2.weight)
+    console.log(apple1.weight)
+
+</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Remote Tv</title>
+</head>
+<body>
+<script>
+    let Remote = function (name) {
+        this.name = name;
+        this.changeChannel = function (tv, channel) {
+            if (tv.status) {
+                tv.changeChannel(channel)
+            } else {
+                console.log('Tv đang tắt bạn ơi. Bật lên trước đi bạn')
+            }
+        }
+        this.changeVolume = function (tv, volume) {
+            if (tv.status) {
+                tv.changeVolume(volume)
+            } else {
+                console.log('Tv đang tắt bạn ơi. Bật lên trước đi bạn')
+            }
+        }
+        this.turnOnOff = function (tv) {
+            if (tv.status) {
+                tv.status = false;
+                tv.turnTvOnOFF()
+            } else {
+                tv.status = true;
+                tv.turnTvOnOFF()
+            }
+        }
+    }
+    let Tv = function (channel, volume, status) {
+        this.channel = channel;
+        this.volume = volume;
+        this.status = status;
+        this.changeChannel = function (channel) {
+            if (this.status) {
+                this.channel = channel;
+                console.log('Kênh hiện tại là: ' + channel);
+            } else {
+                console.log('Bật TV lên trước đi bạn')
+            }
+
+        }
+        this.changeVolume = function (volume) {
+            if (this.status) {
+                this.volume = volume;
+                console.log('Volume hiện tại là: ' + volume)
+            } else {
+                console.log('Tv đang tắt thì how to tăng âm lượng bạn ơi')
+            }
+
+        }
+        this.turnTvOnOFF = function () {
+            if (this.status) {
+                console.log(this.status);
+            } else {
+
+                console.log(this.status);
+            }
+        }
+    }
+    let tv1 = new Tv(5, 7, false);
+    let remote1 = new Remote('smart remote');
+    remote1.turnOnOff(tv1);
+    tv1.changeChannel(7)
+    remote1.changeChannel(tv1, 3);
+    remote1.changeVolume(tv1, 9);
+    remote1.turnOnOff(tv1);
+    remote1.changeChannel(tv1, 0);
+    tv1.changeVolume(0);
+
+
+</script>
+</body>
+</html>

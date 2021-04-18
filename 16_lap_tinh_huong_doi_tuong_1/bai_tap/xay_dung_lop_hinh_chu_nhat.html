@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hình chữ nhât</title>
+</head>
+<body>
+<canvas id="myCanvas" width="500px" height="300px" style="border:1px solid #d3d3d3;"></canvas>
+<p>
+    <button id="start" onclick="newRectangle()">Click đi bạn ơi</button>
+</p>
+<script>
+    let Rectangle = function (width, height) {
+        this.width = width;
+        this.height = height;
+        this.getArea = function () {
+            return width * height;
+        }
+        this.getPerimeter = function () {
+            return 2 * (width + height);
+        }
+        this.create = function createRectangele() {
+            let ctx = document.getElementById("myCanvas").getContext("2d");
+            let x = Math.random() * 400;
+            let y = Math.random() * 250;
+            ctx.fillRect(x, y, width * 10, height * 10);
+        }
+    }
+    let rectangle1;
+
+    function newRectangle() {
+        let width = parseInt(prompt("Nhập vào chiều rộng đi bạn: "))
+        let height = parseInt(prompt("Nhập vào chiều dài đi bạn: "))
+        rectangle1 = new Rectangle(width, height);
+        let area = rectangle1.getArea()
+        let Perimeter = rectangle1.getPerimeter();
+        let create = rectangle1.create();
+        alert('Diện tích: ' + area + ' Chu vị: ' + Perimeter);
+    }
+
+
+</script>
+</body>
+</html>

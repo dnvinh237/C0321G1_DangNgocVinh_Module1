@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mô Tả điện thoại</title>
+</head>
+<body>
+<p>Battery: <span id="battery1"></span></p>
+<p>Draft: <span id="draft1"> </span></p>
+<p>Inbox: <span id="inbox1"></span></p>
+<p>Outbox:<span id="outbox1"></span></p>
+<p>MobileStatus: <span id="checkMobile1"></span></p>
+<button onclick="mobile1.checkOnOFF(this.value)" value="1">Check Mobile Status</button>
+<button onclick="mobile1.turnOnOFF(this.value)" value="1"> Click để bật/tắt</button>
+<input type="text" id="sendMessage1" placeholder="sendMessage">
+<button onclick="mobile1.sendMessage(this.value)" id="send1" value="1">Send Message</button>
+<button onclick="mobile1.viewMessageInbox(this.value)" value="1">Check Inbox</button>
+<button onclick="mobile1.viewMessageOutbox(this.value)" value="1">Check Outbox</button>
+<hr>
+<hr>
+<hr>
+
+<p>Battery: <span id="battery2"></span></p>
+<p>Draft: <span id="draft2"> </span></p>
+<p>Inbox: <span id="inbox2"></span></p>
+<p>Outbox:<span id="outbox2"></span></p>
+<p>CheckMobile: <span id="checkMobile2"></span></p>
+<button onclick="mobile2.checkOnOFF(this.value)" value="2">Check Mobile Status</button>
+<button onclick="mobile2.turnOnOFF(this.value)" value="2"> Click để bật/tắt</button>
+<input type="text" id="sendMessage2" placeholder="sendMessage">
+<button onclick="mobile2.sendMessage(this.value)" id="send2" value="2">Send Message</button>
+<button onclick="mobile2.viewMessageInbox(this.value)" value="2">Check Inbox</button>
+<button onclick="mobile2.viewMessageOutbox(this.value)" value="2">Check Outbox</button>
+
+<script>
+    let Mobile = function (battery, draft, inbox, outbox, status) {
+
+        this.battery = battery;
+        this.draft = draft;
+        this.inbox = inbox;
+        this.outbox = outbox;
+        this.status = status;
+
+        this.checkOnOFF = function (n) {
+            if (n == 1) {
+                alert(mobile1.status)
+            } else if (n == 2) {
+                alert(mobile2.status)
+            }
+        }
+        this.turnOnOFF = function (n) {
+            if (n == 1) {
+                if (mobile1.status) {
+                    mobile1.status = false
+                    document.getElementById('checkMobile1').innerText = mobile1.status
+                } else {
+                    mobile1.status = true;
+                    document.getElementById('checkMobile1').innerText = mobile1.status
+                }
+
+            } else if (mobile2.status) {
+                mobile2.status = false;
+                document.getElementById('checkMobile2').innerText = mobile2.status
+            } else {
+                mobile2.status = true;
+                document.getElementById('checkMobile2').innerText = mobile2.status
+            }
+        }
+        this.sendMessage = function (n) {
+
+            if (n == 1 && mobile1.status) {
+                mobile1.battery--;
+                document.getElementById('battery1').innerText = mobile1.battery;
+                let sendMessage = document.getElementById('sendMessage1').value;
+                return mobile1.receiveMessage(sendMessage, n);
+            } else if (n == 2 && mobile2.status) {
+                mobile2.battery--;
+                document.getElementById('battery2').innerText = mobile2.battery;
+                let sendMessage = document.getElementById('sendMessage2').value;
+                return mobile1.receiveMessage(sendMessage, n);
+            }
+        }
+        this.receiveMessage = function (sendMessage, n) {
+            if (n == 1) {
+                document.getElementById('inbox2').innerText += sendMessage + ' ';
+                document.getElementById('outbox1').innerText += sendMessage + ' ';
+
+            } else {
+                document.getElementById('outbox2').innerText += sendMessage + ' ';
+                document.getElementById('inbox1').innerText += sendMessage + ' ';
+            }
+        }
+        this.viewMessageInbox = function (n) {
+
+            if (n == 1 && mobile1.status) {
+                alert(document.getElementById('inbox1').innerText)
+            } else if (n == 2 && mobile2.status) {
+                alert(document.getElementById('inbox2').innerText)
+            }
+        }
+        this.viewMessageOutbox = function (n) {
+            if (n == 1 && mobile1.status) {
+                alert(document.getElementById('outbox1').innerText)
+
+            } else if (n == 2 && mobile2.status) {
+                alert(document.getElementById('outbox2').innerText)
+
+            }
+
+        }
+    }
+    let mobile1 = new Mobile(100, 'a', 'b', 'c', true);
+    document.getElementById('checkMobile1').innerText = mobile1.status;
+    document.getElementById('battery1').innerText = mobile1.battery;
+    document.getElementById('draft1').innerText = mobile1.draft;
+    document.getElementById('inbox1').innerText = mobile1.inbox;
+    document.getElementById('outbox1').innerText = mobile1.outbox;
+
+
+    let mobile2 = new Mobile(100, 'A', 'B', 'C', true);
+    document.getElementById('checkMobile2').innerText = mobile2.status;
+    document.getElementById('battery2').innerText = mobile2.battery;
+    document.getElementById('draft2').innerText = mobile2.draft;
+    document.getElementById('inbox2').innerText = mobile2.inbox;
+    document.getElementById('outbox2').innerText = mobile2.outbox;
+
+</script>
+</body>
+</html>

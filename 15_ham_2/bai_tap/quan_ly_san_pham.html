@@ -14,10 +14,14 @@
 <script>
     let arr1 = ['Samsung', 'Iphone', 'Xiaomi'];
 
+
     function addNewProduct() {
         let newProduct = document.getElementById('newProduct').value;
-        if (newProduct == '') {
-            return arr1;
+        for (let i = 0; i < arr1.length; i++) {
+            if (newProduct == arr1[i]) {
+                alert('Đã có sản phẩm này rồi bạn ơi')
+                return arr1;
+            }
         }
         arr1.push(newProduct);
         alert('Đã thêm vào sản phẩm: ' + newProduct)
@@ -39,11 +43,17 @@
 
     function editProduct(i) {
         let editName = prompt('Bạn muốn sửa tên sản phẩm thành: ');
-        arr1[i] = editName;
+        if (editName != null) {
+            arr1[i] = editName;
+        }
+
     }
 
     function removeProduct(i) {
-        arr1.splice(i, 1);
+        let remove = confirm('Bạn có muốn xóa sản phẩm này không? ')
+        if (remove == true) {
+            arr1.splice(i, 1);
+        }
     }
 </script>
 </body>

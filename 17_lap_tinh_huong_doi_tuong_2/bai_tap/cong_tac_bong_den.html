@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Công tắt bóng đèn</title>
+</head>
+<body>
+<script>
+    let Lamp = function (status) {
+        this.status = status;
+        this.turnOn = function () {
+            document.writeln('Đang sáng đó bạn ơi<br>')
+        }
+        this.turnOff = function () {
+            document.writeln('Đang tắt đó bạn ơi<br>')
+        }
+    }
+    let SwitchButton = function (status) {
+        this.status = status;
+        this.switchOn = function (lamp) {
+            this.status = true;
+            lamp.status = true;
+            lamp.turnOn();
+        }
+        this.switchOff = function (lamp) {
+            this.status = false;
+            lamp.status = false;
+            lamp.turnOff();
+        }
+    }
+    let lamp1 = new Lamp(false);
+    let lamp2 = new Lamp(false);
+    let switchButton1 = new SwitchButton(false);
+    switchButton1.switchOn(lamp1);
+    switchButton1.switchOff(lamp2);
+    switchButton1.switchOff(lamp2);
+
+</script>
+</body>
+</html>

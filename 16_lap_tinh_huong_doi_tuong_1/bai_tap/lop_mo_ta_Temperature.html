@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<script>
+    let Temperature = function (temp) {
+        if (temp < -273) {
+            alert('Nhỏ nhất là -273 thôi bạn')
+            return;
+        }
+        this.temp = temp;
+        this.getF = function () {
+            return (temp * 1.8) + 32;
+        }
+        this.getK = function () {
+            const k = 273.15;
+            return temp + k
+        }
+    }
+    let temp = parseInt(prompt('Nhập độ C vào bạn ơi: '));
+    let change = new Temperature(temp);
+    let f = change.getF();
+    let k = change.getK();
+    alert('ĐỘ C là: ' + temp + ' tương đương độ F là ' + f + ' tương độ K là ' + k)
+
+</script>
+</body>
+</html>

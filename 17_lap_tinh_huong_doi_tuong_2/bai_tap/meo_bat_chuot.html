@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meo Bat chuot</title>
+</head>
+<body>
+<script>
+    let Mouse = function (name, weight, speed, status) {
+        this.name = name;
+        this.weight = weight;
+        this.speed = speed;
+        this.status = status;
+        this.say = function (mouseText) {
+            console.log(mouseText);
+        }
+    }
+    let Cat = function (name, weight, speed, checkCatch) {
+        this.name = name;
+        this.weight = weight;
+        this.speed = speed;
+
+        this.say = function (catText) {
+            console.log(catText);
+        }
+
+        this.catch = function (mouse) {
+            if (this.speed > mouse.speed) {
+                this.checkCatch = true;
+            } else {
+                this.checkCatch = false;
+            }
+        }
+
+        this.eat = function (mouse) {
+            if (this.checkCatch == true && mouse.status == true) {
+                this.weight += mouse.weight;
+                this.say('ngon qua')
+            } else if (!checkCatch && mouse.status == true) {
+                mouse.say('Đố anh bắt được em')
+            } else if (!mouse.status) {
+                this.say('Chuột chết rồi')
+            }
+        }
+    }
+    let cat1 = new Cat('Tom', 15, 10);
+    let mouse1 = new Mouse('Jerry', 1, 5, true);
+    let mouse2 = new Mouse('Jerry2', 2, 20, true);
+    let mouse3 = new Mouse('Jerry3', 1, 7, false);
+    let house = [mouse1, mouse2, mouse3]
+    for (let i = 0; i < house.length; i++) {
+        cat1.catch(house[i]);
+        cat1.eat(house[i]);
+    }
+
+    console.log(cat1.weight)
+</script>
+
+</body>
+</html>

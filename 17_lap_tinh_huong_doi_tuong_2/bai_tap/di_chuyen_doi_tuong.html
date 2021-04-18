@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Di chuyen doi tuong</title>
+</head>
+<body>
+<!--<img src="sleep.jpg" style="top: 400px;left: 0px; position: absolute" width="100px"-->
+<!--     height="100px">-->
+<p id="game"></p>
+<script>
+    function Hero(image, top, left, size, speed) {
+        this.image = image;
+        this.top = top;
+        this.left = left;
+        this.size = size;
+        this.speed = speed;
+
+        this.getHeroElement = function () {
+            return '<img width="' + this.size + '"' +
+                ' height="' + this.size + '"' +
+                ' src="' + this.image + '"' +
+                ' style="top: ' + this.top + 'px; left:' + this.left + 'px;position:absolute;" />';
+        }
+
+        this.moveRight = function () {
+            this.left += this.speed;
+            // console.log('ok: ' + this.left);
+        }
+        this.moveDown = function () {
+            this.top += this.speed;
+        }
+        this.moveLeft = function () {
+            this.left -= this.speed;
+        }
+        this.moveTop = function () {
+            this.top -= this.speed;
+        }
+    }
+
+    let hero = new Hero('../bai_tap/sleep.jpg', 20, 30, 200, 30);
+
+    function start() {
+        if (hero.left < window.innerWidth - hero.size && hero.top <= 20) {
+            hero.moveRight();
+        } else if (hero.top < window.innerHeight - hero.size && hero.left > window.innerWidth - hero.size) {
+            hero.moveDown()
+        } else if (hero.top > window.innerHeight - hero.size && hero.left > 30) {
+            hero.moveLeft()
+        } else {
+            hero.moveTop()
+        }
+
+        document.getElementById('game').innerHTML = hero.getHeroElement();
+        setTimeout(start, 10)
+    }
+
+    start();
+</script>
+
+</body>
+</html>
