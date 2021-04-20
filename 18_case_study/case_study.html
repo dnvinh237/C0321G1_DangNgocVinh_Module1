@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>case study</title>
+</head>
+<body>
+<!--<h3>I.	Yêu cầu 1 (Vẽ hình *)</h3>-->
+<!--<h3>Bài 1: Vẽ hình chữ nhật rỗng chiều dài n và chiều rộng m theo hình dưới đây. </h3>-->
+<!--<script>-->
+<!--    let n = 5;-->
+<!--    let m = 4;-->
+
+<!--    let star = '&nbsp*';-->
+<!--    let space = '&nbsp&nbsp';-->
+<!--        document.writeln(star.repeat(n) + '<br>');-->
+<!--        for(let i = 0; i <m-2 ; i++) {-->
+<!--            document.writeln(star +space.repeat(n) + star + '<br>')-->
+<!--        }-->
+<!--    document.writeln(star.repeat(n) + '<br>');-->
+<!--</script>-->
+<!--<h3>Bài 2: Vẽ tam giác vuông cân rỗng có chiều cao h. Ví dụ: h = 5 </h3>-->
+<!--<script>-->
+<!--    let h = 10;-->
+<!--    let star = '*';-->
+<!--    let space = '&nbsp&nbsp';-->
+<!--    document.writeln(star+'<br>');-->
+<!--    for (let i=0;i<h-2;i++){-->
+<!--        document.writeln(star+ space.repeat(i)+star+'<br>')-->
+<!--    }-->
+<!--    document.writeln(star.repeat(h))-->
+
+<!--</script>-->
+
+<!--<h3>Bài 3: Vẽ tam giác cân đặc có chiều cao h. Ví dụ: h = 5 </h3>-->
+<!--<script>-->
+<!--    let star = '*';-->
+<!--    let space = '&nbsp&nbsp';-->
+<!--    let j =1;-->
+<!--    for (let h=10;h>0;h&#45;&#45;){-->
+<!--        document.write(space.repeat(h)+star.repeat(j)+'<br>')-->
+<!--        j+=2;-->
+<!--    }-->
+<!--</script>-->
+
+<!--<h3>Bài 4: Vẽ tam giác cân rỗng có chiều cao h. Ví dụ: h = 5 </h3>-->
+<!--<script>-->
+<!--    let h=10;-->
+<!--    let star = '*';-->
+<!--    let space = '&nbsp&nbsp';-->
+<!--    let j =1;-->
+
+<!--    document.write(space.repeat(h)+star+'<br>')-->
+<!--    for ( let i =h-1;i>0;i-=1){-->
+<!--        document.write(space.repeat(i)+star+ space.repeat(j)+star+'<br>')-->
+<!--        j+=2;-->
+<!--    }-->
+<!--    document.write(star.repeat(h*2+1)+'<br>');-->
+<!--</script>-->
+<!--<h3>II. Yêu cầu 2 ( If và switch case)</h3>-->
+<!--<h3>Bài 1: Viết một chương trình để nhập lương nhân viên, tính thuế thu nhập và lương ròng-->
+<!--    (số tiền lương thực sự mà nhân viên đó nhận được).-->
+<!--    Với các thông số giả sử như sau (không theo luật lương, chỉ là con số giả sử để dễ tính toán):-->
+<!--    20% thuế thu nhập nếu lương là 15 triệu.-->
+<!--    10% thuế thu nhập nếu lương từ 7 đến 15 triệu.-->
+<!--    5% thuế thu nhập nếu lương dưới 7 triệu-->
+<!--</h3>-->
+<!--<script>-->
+<!--    let x = parseInt(prompt('Nhập lương vào đi bạn: '))-->
+<!--    let tax =0;-->
+<!--    let salary =0;-->
+<!--    if (x <7){-->
+<!--        tax = x * 0.05;-->
+<!--        salary = x -tax;-->
+<!--    } else if(x>=7&&x<15){-->
+<!--        tax = x *0.1;-->
+<!--        salary = x -tax;-->
+<!--    } else if( x >=15){-->
+<!--        tax = x *0.2;-->
+<!--        salary = x -tax;-->
+<!--    }-->
+<!--    document.writeln('với thu nhập là '+x +' thì thuế thu nhập là '+ tax +' và lương thực nhận là '+salary)-->
+<!--</script>-->
+
+<h3>Bài 2: Viết chương trình kiểm tra một ký tự trong bảng chữ cái tiếng anh là nguyên âm hay phụ âm.
+    Ký tự là bất kỳ được nhập từ bàn phím.
+    Các ký tự nguyên âm bao gồm: 'o', 'u', 'i', 'a', 'e' hoặc 'O', 'U', 'I', 'A', 'E'</h3>
+<script>
+    let str = prompt('Nhập kí tự vào đi bạn: ');
+    switch (str.toLowerCase()) {
+        case 'o':
+        case 'u':
+        case 'i':
+        case 'a':
+        case 'e':
+            alert('Ký tự nhập vào là nguyên âm');
+            break;
+        default:
+            alert('Ký tự nhập vào là phụ âm');
+            break;
+    }
+</script>
+
+
+<!--<h3>III. Yêu cầu 3 (Mảng và Loop)</h3>-->
+<!--<h3>Bài 1: Cho mảng a chỉ chứa các số nguyên</h3>-->
+<!--<script>-->
+<!--    let arr1 = [1, 2, 3, 5];-->
+<!--    let arr2 = [];-->
+<!--    let sum = 0;-->
+<!--    for (let i = 0; i < arr1.length; i++) {-->
+<!--        sum += arr1[i]-->
+<!--        arr2.push(sum)-->
+<!--    }-->
+<!--    document.writeln(arr1.join(' ') + '<br>');-->
+<!--    document.writeln(arr2.join(' '));-->
+<!--</script>-->
+
+
+<!--<h3>Bài 2: Cho 2 mảng A và B chứa số nguyên.-->
+<!--    Tìm ra một mảng đã được sắp xếp chứa các phần tử xuất hiện trong mảng B nhưng lại không xuất hiện A</h3>-->
+<!--<script>-->
+<!--    let arr1 = [7, 2, 5, 3, 5, 3];-->
+<!--    let arr2 = [7, 2, 5, 4, 6, 3, 5, 3];-->
+<!--    let arr3 = [];-->
+<!--    for (let i = 0; i < arr2.length; i++) {-->
+<!--        let check1 = true;-->
+<!--        let check2 = false;-->
+<!--        for (let j = 0; j < arr1.length; j++) {-->
+<!--            if (arr2[i] == arr1[j]) {-->
+<!--                check1 = false;-->
+<!--                break;-->
+<!--            }-->
+<!--            check1 = true;-->
+<!--        }-->
+<!--        if (check1) {-->
+<!--            for (let j = 0; j <= arr3.length; j++) {-->
+<!--                if (arr2[i] == arr3[j]) {-->
+<!--                    check2 = false;-->
+<!--                    break;-->
+<!--                }-->
+<!--                check2 = true;-->
+<!--            }-->
+<!--        }-->
+<!--        if (check2) {-->
+<!--            arr3.push(arr2[i])-->
+<!--        }-->
+<!--    }-->
+<!--    document.writeln(arr1.join(' ') + '<br>');-->
+<!--    document.writeln(arr2.join(' ') + '<br>');-->
+<!--    document.writeln(arr3.join(' '));-->
+<!--</script>-->
+<!--<h3>Bài 3: Cho một danh sách các phân số, hãy tìm chỉ số của phân số lớn nhất (đếm từ 0)-->
+<!--    Giả định rằng không có các phân số bằng nhau trong tập đầu vào-->
+<!--</h3>-->
+<!--<script>-->
+<!--    let arr1 = [5, 2, 5];-->
+<!--    let arr2 = [6, 3, 4];-->
+<!--    let arr3 = [];-->
+<!--    let max = 0;-->
+<!--    for (let i = 0; i < arr1.length; i++) {-->
+<!--        for (let j = 0; j < arr2.length; j++) {-->
+<!--            let num = arr1[i] / arr2[j];-->
+<!--            arr3.push(num)-->
+<!--        }-->
+<!--    }-->
+<!--    for (let i = 0; i < arr3.length; i++) {-->
+<!--        if (arr3[i] > max) {-->
+<!--            max = arr3[i];-->
+<!--        }-->
+<!--    }-->
+<!--    document.writeln(arr3.join(' ') + '<br>')-->
+<!--    document.writeln('Phân số lớn nhất là ' + max + '<br>')-->
+<!--    document.writeln('Có chỉ số là ' + Math.ceil(max))-->
+<!--</script>-->
+
+<!--<h3>Bài 4: Viết một chương trình nhập một số từ bàn phím và in ra màn hình bằng chữ. Ví dụ x-->
+<!--</h3>-->
+<!--<script>-->
+<!--    let arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];-->
+<!--    let arr2 = ['mot', 'hai', 'ba', 'bon', 'nam', 'sau', 'bay', 'tam', 'chin', 'khong'];-->
+<!--    let str = prompt('Nhập một số vào: ');-->
+<!--    // alert(num.length)-->
+<!--    for (let i = 0; i < str.length; i++) {-->
+<!--        let num = parseInt(str.charAt(i));-->
+
+<!--        for (let j = 0; j < arr1.length; j++) {-->
+<!--            if (num == arr1[j]) {-->
+<!--                document.writeln(arr2[j])-->
+<!--            }-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+
+<!--<h3>Bài 4: Viết một chương trình nhập một số từ bàn phím và in ra màn hình bằng chữ. Ví dụ x-->
+<!--</h3>-->
+<!--<script>-->
+<!--    let menu = ['Cafe','Cam vắt','Nước ép cà rốt','Nước ép cà chua','Nước lọc','Nước dừa'];-->
+<!--    let price =[10,15,20,25,30,35];-->
+<!--    let str = prompt('Nhập vào nước uống bạn muốn:');-->
+<!--    let i=0;-->
+<!--    for(;i<menu.length;i++){-->
+<!--        if(str == menu[i]){-->
+<!--            alert('Đơn giá món đó là: ' +price[i]);-->
+<!--            break;-->
+<!--        }-->
+<!--    }-->
+<!--    let n =0;-->
+<!--    do{-->
+<!--        n =parseInt(prompt('Nhập vào số lượng bạn muốn: '))-->
+<!--        let total = price[i]*n;-->
+<!--        alert(total)-->
+<!--    }while(n!=7);-->
+<!--</script>-->
+
+
+<!--<h3>IV. Yêu cầu 4 (String)</h3>-->
+
+<!--<h3>Bai 1</h3>-->
+
+<!--<script>-->
+<!--    let str = prompt('Nhập vào đi bạn: ');-->
+<!--    let str1 = str.replace(/\s+  /g, ' ');-->
+<!--    let str2 = '';-->
+<!--    for (let i = 0; i < str1.length; i++) {-->
+<!--        // alert(str1.charAt(i).toLowerCase())-->
+<!--        if (str1.charAt(i) == str1.charAt(i).toLowerCase()) {-->
+<!--            str2 += str1.charAt(i).toUpperCase()-->
+<!--        } else {-->
+<!--            str2 += str1.charAt(i).toLowerCase()-->
+<!--        }-->
+<!--    }-->
+<!--    let arr = str2.split(' ');-->
+<!--    let max = 0;-->
+<!--    let index = 0;-->
+<!--    for (let i = 0; i < arr.length; i++) {-->
+<!--        if (arr[i].length > max) {-->
+<!--            max = arr[i].length;-->
+<!--            index = i;-->
+<!--        }-->
+<!--    }-->
+<!--    alert('Chuỗi ký tự đã thay đổi: ' + str2)-->
+<!--    alert('Ký tự dài nhất: ' + arr[index])-->
+<!--</script>-->
+
+<!--<h3>Bài 2: Cho xâu kí tự. Hãy đếm số lượng kí tự khác nhau trong xâu đó</h3>-->
+<!--<script>-->
+<!--    let str = prompt('Nhập chuỗi vào đi bạn: ');-->
+<!--    // let str = 'aaaaabbabasdsadsaddsgdfhfdbcccccd'-->
+<!--    let arr = [];-->
+<!--    let count = 0;-->
+<!--    let check = false;-->
+<!--    for (let i = 0; i < str.length; i++) {-->
+<!--        for (let j = i + 1; j < str.length; j++) {-->
+<!--            if (str.charAt(i) == str.charAt(j)) {-->
+<!--                check = false;-->
+<!--                break;-->
+<!--            }-->
+<!--            check = true;-->
+<!--        }-->
+<!--        if (check) {-->
+<!--            arr.push(str.charAt(i))-->
+<!--            count++;-->
+<!--        }-->
+<!--    }-->
+<!--    document.writeln('Số kí tự khác nhau là: ' + count+'<br>');-->
+<!--    document.writeln('Các kí tự đó là: '+arr);-->
+<!--//  </script>-->
+
+<!--<h3>Bài 3: Cho hai xâu kí tự, tìm số lượng kí tự chung giữa chúng.</h3>-->
+<!--<script>-->
+<!--    let str1 = "aabcc";-->
+<!--    let str2 = "adcaa";-->
+<!--    let arr3 = [];-->
+<!--    let count = 0;-->
+<!--    let check = false;-->
+<!--    for (let i = 0; i < str1.length; i++) {-->
+<!--        let j = 0;-->
+<!--        for (; j < str2.length; j++) {-->
+<!--            if (str1[i] == str2[j]) {-->
+<!--                check = true;-->
+<!--                str2 = str2.slice(0, j) + str2.slice(j+1, str2.length);-->
+<!--                break;-->
+<!--            }-->
+<!--            check = false;-->
+<!--        }-->
+<!--        if (check) {-->
+<!--            arr3.push(str1[i]);-->
+<!--            count++;-->
+<!--        }-->
+<!--    }-->
+<!--    alert(arr3);-->
+<!--    alert(count);-->
+<!--</script>-->
+
+<!--<h3>V. Yêu cầu 5 (Mảng 2 chiều)</h3>-->
+<!--<h3>Bài 1: Viết hàm tính tổng các số chẵn trong ma trận có kích thước m*n. Với m, n lhà các số nập từ bàn phím.</h3>-->
+<!--<script>-->
+
+<!--    let m = parseInt(prompt('Nhập vào số m: '));-->
+<!--    let n = parseInt(prompt('Nhập vào số n: '));-->
+<!--    let arr1 = new Array(m)-->
+<!--    let num = 0;-->
+<!--    for (let i = 0; i < m; i++) {-->
+<!--        arr1[i] = new Array(n)-->
+<!--        for (let j = 0; j < n; j++) {-->
+<!--            arr1[i][j] = num++;-->
+<!--        }-->
+<!--    }-->
+<!--    let sum = 0;-->
+<!--    for (let i = 0; i < m; i++) {-->
+<!--        for (let j = 0; j < n; j++) {-->
+<!--            if (arr1[i][j] % 2 == 0) {-->
+<!--                sum += arr1[i][j];-->
+<!--            }-->
+<!--        }-->
+<!--    }-->
+<!--    alert(sum)-->
+<!--</script>-->
+
+<!--<h3>Bài 2: Viết hàm liệt kê các số nguyên tố trong mảng 2 chiều, đếm các số nguyên tố có trong mảng đó.</h3>-->
+<!--<script>-->
+<!--    let m = parseInt(prompt('Nhập vào số m: '));-->
+<!--    let n = parseInt(prompt('Nhập vào số n: '));-->
+<!--    let arr1 = new Array(m);-->
+<!--    let arr2 = [];-->
+<!--    let num = 0;-->
+<!--    for (let i = 0; i < m; i++) {-->
+<!--        arr1[i] = new Array(n)-->
+<!--        for (let j = 0; j < n; j++) {-->
+<!--            arr1[i][j] = num++;-->
+<!--        }-->
+<!--    }-->
+<!--    alert(arr1)-->
+<!--    for (let i = 0; i < m; i++) {-->
+<!--        let check = false;-->
+<!--        for (let j = 0; j < n; j++) {-->
+<!--            for (let x = 2; x < arr1[i][j] - 1; x++) {-->
+<!--                if (arr1[i][j] < 2) {-->
+<!--                    break;-->
+<!--                }-->
+<!--                if (arr1[i][j] % x == 0) {-->
+<!--                    check = false;-->
+<!--                    break;-->
+<!--                }-->
+<!--                check = true;-->
+<!--            }-->
+<!--            if (check) {-->
+<!--                arr2.push(arr1[i][j]);-->
+<!--            }-->
+<!--        }-->
+<!--    }-->
+<!--    alert(arr2);-->
+<!--</script>-->
+
+
+<!--<h3>Bài 3: Viết hàm tìm giá trị lớn nhất, nhỏ nhất trong mảng 2 chiều.</h3>-->
+<!--<script>-->
+<!--    let m = parseInt(prompt('Nhập vào số m: '));-->
+<!--    let n = parseInt(prompt('Nhập vào số n: '));-->
+<!--    let arr1 = new Array(m);-->
+<!--    for (let i = 0; i < m; i++) {-->
+<!--        arr1[i] = new Array(n)-->
+<!--        for (let j = 0; j < n; j++) {-->
+<!--            arr1[i][j] = parseInt(prompt(' Nhập số: '));-->
+<!--        }-->
+<!--    }-->
+<!--    let min = arr1[0][0];-->
+<!--    let max = arr1[0][0];-->
+<!--    for (let i = 0; i < m; i++) {-->
+<!--        for (let j = 0; j < n; j++) {-->
+<!--            if (arr1[i][j] < min) {-->
+<!--                min = arr1[i][j];-->
+<!--            }-->
+<!--            if (arr1[i][j] > max) {-->
+<!--                max = arr1[i][j];-->
+<!--            }-->
+<!--        }-->
+<!--    }-->
+<!--    alert('Số lớn nhất là: ' +max);-->
+<!--    alert('Số nhỏ nhất là: ' +min);-->
+<!--</script>-->
+
+<!--<h3>VI. Yêu cầu 6 (OOP)</h3>-->
+<!--<table>-->
+<!--    <tr>-->
+<!--        <th><input type="number" id="num1"></th>-->
+<!--        <th><input type="number" id="num2"></th>-->
+<!--        <th><input type="number" id="num3"></th>-->
+<!--        <th><input type="number" id="num4"></th>-->
+<!--        <th><input type="number" id="num5"></th>-->
+<!--        <th><input type="number" id="num6"></th>-->
+<!--    </tr>-->
+<!--</table>-->
+<!--<button onclick="confirmBuy()">Click mua vé</button>-->
+<!--<button onclick="checkPrize()">Click để nhận giải</button>-->
+<!--<button onclick="newLottery()">Click để mua lại vé nào</button>-->
+<!--<p>Giải nhất là 1-2-3-4-5-6</p>-->
+<!--<p>Vé của bạn đã mua là: <span  id="displayLottery"> </span></p>-->
+
+<!--<script>-->
+<!--    class Lottery {-->
+<!--        constructor(num1, num2, num3, num4, num5, num6) {-->
+<!--            this.num1 = num1;-->
+<!--            this.num2 = num2;-->
+<!--            this.num3 = num3;-->
+<!--            this.num4 = num4;-->
+<!--            this.num5 = num5;-->
+<!--            this.num6 = num6;-->
+<!--        }-->
+
+<!--        setNum1(num1) {-->
+<!--            this.num1 = num1;-->
+<!--        }-->
+
+<!--        getNum1() {-->
+<!--            return this.num1;-->
+<!--        }-->
+
+<!--        setNum2(num2) {-->
+<!--            this.num2 = num2;-->
+<!--        }-->
+
+<!--        getNum2() {-->
+<!--            return this.num2;-->
+<!--        }-->
+
+<!--        setNum3(num3) {-->
+<!--            this.num3 = num3;-->
+<!--        }-->
+
+<!--        getNum3() {-->
+<!--            return this.num3;-->
+<!--        }-->
+
+<!--        setNum4(num4) {-->
+<!--            this.num4 = num4;-->
+<!--        }-->
+
+<!--        getNum4() {-->
+<!--            return this.num4;-->
+<!--        }-->
+
+<!--        setNum5(num5) {-->
+<!--            this.num5 = num5;-->
+<!--        }-->
+
+<!--        getNum5() {-->
+<!--            return this.num5;-->
+<!--        }-->
+
+<!--        setNum6(num6) {-->
+<!--            this.num6 = num6;-->
+<!--        }-->
+
+<!--        getNum6() {-->
+<!--            return this.num6;-->
+<!--        }-->
+<!--    }-->
+
+<!--    let luckyLottery = new Lottery(1, 2, 3, 4, 5, 6);-->
+<!--    let arrLucky = [];-->
+<!--    let arrLottery = [];-->
+<!--    let count = 0;-->
+<!--    arrLucky.push(luckyLottery.getNum1());-->
+<!--    arrLucky.push(luckyLottery.getNum2());-->
+<!--    arrLucky.push(luckyLottery.getNum3());-->
+<!--    arrLucky.push(luckyLottery.getNum4());-->
+<!--    arrLucky.push(luckyLottery.getNum5());-->
+<!--    arrLucky.push(luckyLottery.getNum6());-->
+
+<!--    function buyTicket() {-->
+<!--        let buy = prompt('Nếu bạn muốn tự nhập thì nhập 1 \n' +-->
+<!--            'còn nếu bạn muốn random thì chọn 2');-->
+<!--        switch (buy) {-->
+<!--            case '1':-->
+<!--                alert('Vui lòng nhập số vào các ô phía dưới:');-->
+<!--                break;-->
+<!--            case '2':-->
+<!--                randomBuy();-->
+<!--                break;-->
+<!--                default:-->
+<!--                    buyTicket();-->
+<!--        }-->
+<!--    }-->
+<!--    function confirmBuy() {-->
+<!--        if (arrLottery!=0) {-->
+<!--            alert('Bạn đã có vé rồi.Số là:' +arrLottery.join('-'))-->
+<!--            return;-->
+<!--        }-->
+<!--        let lottery1 = new Lottery()-->
+<!--        lottery1.setNum1(document.getElementById('num1').value);-->
+<!--        lottery1.setNum2(document.getElementById('num2').value);-->
+<!--        lottery1.setNum3(document.getElementById('num3').value);-->
+<!--        lottery1.setNum4(document.getElementById('num4').value);-->
+<!--        lottery1.setNum5(document.getElementById('num5').value);-->
+<!--        lottery1.setNum6(document.getElementById('num6').value);-->
+<!--        arrLottery.push(lottery1.getNum1());-->
+<!--        arrLottery.push(lottery1.getNum2());-->
+<!--        arrLottery.push(lottery1.getNum3());-->
+<!--        arrLottery.push(lottery1.getNum4());-->
+<!--        arrLottery.push(lottery1.getNum5());-->
+<!--        arrLottery.push(lottery1.getNum6());-->
+<!--        alert('vé bạn đã mua là: '+arrLottery.join('-'));-->
+<!--        displayLottery()-->
+<!--    }-->
+<!--    function randomBuy() {-->
+<!--        let lottery1 = new Lottery();-->
+<!--        lottery1.setNum1(parseInt(Math.random()*94));-->
+<!--        lottery1.setNum2(parseInt(Math.random()*(95-lottery1.getNum1())+(lottery1.getNum1()+1)));-->
+<!--        lottery1.setNum3(parseInt(Math.random()*(96-lottery1.getNum2())+(lottery1.getNum2()+1)));-->
+<!--        lottery1.setNum4(parseInt(Math.random()*(97-lottery1.getNum3())+(lottery1.getNum3()+1)));-->
+<!--        lottery1.setNum5(parseInt(Math.random()*(98-lottery1.getNum4())+(lottery1.getNum4()+1)));-->
+<!--        lottery1.setNum6(parseInt(Math.random()*(99-lottery1.getNum5())+(lottery1.getNum5()+1)));-->
+<!--        arrLottery.push(lottery1.getNum1());-->
+<!--        arrLottery.push(lottery1.getNum2());-->
+<!--        arrLottery.push(lottery1.getNum3());-->
+<!--        arrLottery.push(lottery1.getNum4());-->
+<!--        arrLottery.push(lottery1.getNum5());-->
+<!--        arrLottery.push(lottery1.getNum6());-->
+<!--        alert('vé random bạn đã mua là: '+arrLottery.join('-'));-->
+<!--        displayLottery()-->
+<!--    }-->
+<!--    function checkPrize() {-->
+<!--        if (arrLottery.length==0){-->
+<!--            alert('Mua vé đã bạn ơi');-->
+<!--            return;-->
+<!--        }-->
+<!--        count=0;-->
+<!--        for (let i = 5; i >= 0; i&#45;&#45;) {-->
+<!--            if (arrLucky[i] == arrLottery[i]) {-->
+<!--                count++;-->
+<!--            } else {-->
+<!--                break;-->
+<!--            }-->
+<!--        }-->
+<!--        switch (count) {-->
+<!--            case 6:-->
+<!--                alert('Bạn đã trúng giải nhất');-->
+<!--                break;-->
+<!--            case 5:-->
+<!--                alert('Bạn đã trúng giải nhì');-->
+<!--                break;-->
+<!--            case 3:-->
+<!--            case 4:-->
+<!--                alert('Bạn đã trúng giải khuyến khích');-->
+<!--                break;-->
+<!--            default:-->
+<!--                alert('Chúc bạn may mắn lần sau');-->
+<!--        }-->
+<!--    }-->
+<!--    function newLottery() {-->
+<!--        arrLottery =[];-->
+<!--        displayLottery()-->
+<!--        buyTicket()-->
+<!--    }-->
+<!--    function displayLottery(){-->
+<!--        document.getElementById('displayLottery').innerText=arrLottery.join('-');-->
+<!--    }-->
+<!--    buyTicket()-->
+<!--// </script>-->
+
+
+<!--<h3>VII.	Yêu cầu 7.</h3>-->
+<!--<div style="border-bottom: 1px blue solid">-->
+<!--    <img src="sleep.jpg" style="width: 50px;height: 50px;float: left ">-->
+<!--    <h1 style="text-align: center;top: 0px; position: relative">Hệ thống quản lý bài tập</h1>-->
+<!--</div>-->
+
+<!--<div style="width: 100%;height: 400px">-->
+<!--    <div style="float: left;width: 20%; border-right: solid 1px red;height: 100%; text-align: center">-->
+<!--        <select name="baitap1" id="b1" style="margin-top: 50px">-->
+<!--            <option value="1">Bài tập 1</option>-->
+<!--            <option value="2">Bài tập 2</option>-->
+<!--        </select>-->
+<!--        <br><br>-->
+<!--        <select name="baitap2" id="b2" style="margin-top: 50px">-->
+<!--            <option value="1">Bài tập 2</option>-->
+<!--            <option value="2">Bài tập 2</option>-->
+<!--        </select>-->
+<!--    </div>-->
+<!--    <div style="float: left;width: 75%">-->
+<!--        <p style="margin-left: 100px">code code code</p>-->
+<!--        <img src="sleep.jpg" style="width: 100px;height: 100px">-->
+<!--    </div>-->
+<!--</div>-->
+
+
+</body>
+</html>
