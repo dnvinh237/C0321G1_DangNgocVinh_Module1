@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quan ly san pham</title>
+</head>
+<body>
+<button onclick="addNew()">Click để thêm sản phẩm</button>
+<p id="display">
+    <script>
+        class Product {
+            constructor(id, name) {
+                this.id = id;
+                this.name = name;
+
+            }
+
+            setId(id) {
+                this.id = id;
+            }
+
+            getId() {
+                return this.id;
+            }
+
+            setName(name) {
+                this.name = name;
+            }
+
+            getName() {
+                return this.name;
+            }
+        }
+
+        let listProduct = [];
+        let product1 = new Product(3, 'abc');
+        let product2 = new Product(4, 'def');
+        listProduct.push(product1, product2);
+        display();
+
+        function display() {
+            let table = '<table border="1px"> <tr>\n' +
+                '        <th>STT</th>\n' +
+                '        <th>ID</th>\n' +
+                '        <th>Tên SP</th>\n' +
+                '        <th>Edit</th>\n' +
+                '        <th>Delete</th>\n' +
+                '    </tr>';
+            for (let i = 0; i < listProduct.length; i++) {
+                table += ' <tr>\n' +
+                    '        <th>' + (i + 1) + '</th>\n' +
+                    '        <th>' + listProduct[i].getId() + '</th>\n' +
+                    '        <th>' + listProduct[i].getName() + '</th>\n' +
+                    '        <th><button onclick="editProduct(' + i + ')">Edit</button></th>\n' +
+                    '        <th><button onclick="deleteProduct(' + i + ')">Delete</button></th>\n' +
+                    '    </tr>'
+            }
+            table += '</table>'
+            document.getElementById('display').innerHTML = table;
+        }
+
+        function editProduct(i) {
+            let confirmEdit = prompt('Bạn muốn chỉnh sửa: ' +
+                '\n 1. ID ' +
+                '\n 2. Tên sản phẩm ' +
+                '\n 3. Thoát')
+            switch (confirmEdit) {
+                case '1':
+                    let editId = prompt('Nhập vào ID ')
+                    listProduct[i].setId(editId);
+                    break;
+                case '2':
+                    let editName = prompt('Nhập vào tên thay đổi');
+                    listProduct[i].setName(editName);
+                    break;
+                case '3':
+                    break;
+                default:
+                    editProduct(i)
+                    break;
+            }
+            display()
+        }
+
+        function deleteProduct(i) {
+            let confirmDelete = confirm('Bạn có muốn xóa sản phẩm: ' + listProduct[i].getName())
+            if (confirmDelete) {
+                listProduct.splice(i, 1);
+            }
+            display();
+        }
+
+        function addNew() {
+            let addNewId = prompt('Nhập vào Id sản phẩm mới: ');
+            let addNewName = prompt('Nhập vào tên sản phẩm mới: ');
+            let product3 = new Product(addNewId, addNewName);
+            listProduct.push(product3);
+            display();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>case study</title>
+</head>
+<body onload="barReady()">
+<canvas width="1050" height="450" style="border: 1px solid"></canvas>
+<p id="ball"></p>
+<p id="bar"></p>
+<p></p>
+<script>
+    class GameBoard {
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+    }
+
+    class Ball {
+        constructor(left, top, speed) {
+            this.left = left;
+            this.top = top;
+            this.speed = speed;
+        }
+
+        getElementBall() {
+            return '<img src="sleep.jpg" style="width: 50px;height: 50px;' +
+                ' top:' + this.top + 'px;' +
+                'left:' + this.left + 'px; position: absolute">'
+        }
+
+        moveLeft() {
+            this.left -= (this.speed * 1.5);
+        }
+
+        moveRight() {
+            this.left += (this.speed * 1.5);
+        }
+
+        moveTop() {
+            this.top -= this.speed;
+        }
+
+        moveBottom() {
+            this.top += this.speed;
+        }
+    }
+
+    class Bar {
+        constructor(left, top) {
+            // this.width = width;
+            this.left = left;
+            this.top = top;
+        }
+
+        getElementBar() {
+            return '<img src="bar_xanh_la.jpg" style="width: 100px;height: 50px;' +
+                ' top:' + this.top + 'px;' +
+                'left:' + this.left + 'px; position: absolute">'
+
+        }
+
+        moveLeft() {
+            this.left -= 20;
+        }
+
+        moveRight() {
+            this.left += 20;
+        }
+    }
+
+    function play() {
+        if (checkLeft) {
+            ball.moveRight()
+        }
+        if (checkRight) {
+            ball.moveLeft()
+        }
+        if (checkTop) {
+            ball.moveBottom()
+        }
+        if (checkBottom) {
+            ball.moveTop()
+        }
+        checkBarLeftRight();
+        if (checkBar) {
+            moveBallLeft()
+        } else {
+            moveBallRight()
+        }
+        if (ball.top == 500) {
+            newGame()
+        }
+        document.getElementById('ball').innerHTML = ball.getElementBall();
+        document.getElementById('bar').innerHTML = bar.getElementBar()
+        setTimeout(play, 0.5)
+    }
+
+    function newGame() {
+        let newGame = confirm('Sao gà quá vậy bạn. Bạn muốn chơi lại không ? ')
+        if (newGame) {
+            ball.left = 200;
+            ball.top = 100;
+        }
+    }
+
+    function checkBarLeftRight() {
+        if (ball.top == (bar.top - 50)) {
+            if (ball.left > (bar.left - 75) && ball.left < (bar.left)) {
+                checkBar = true;
+                hitBar = true;
+            }
+        }
+        if (ball.top == (bar.top - 50)) {
+            if (ball.left > (bar.left) && ball.left < (bar.left + 75)) {
+                checkBar = false;
+                hitBar = true;
+            }
+        }
+    }
+
+    function moveBallLeft() {
+        if (ball.left < 0) {
+            checkLeft = true;
+            checkRight = false;
+            checkTop = false;
+            checkBottom = true;
+            hitBar = false;
+            hitWall = false;
+        }
+        if (ball.left > gameBoard.width) {
+            checkLeft = false;
+            checkRight = true;
+            checkTop = true;
+            checkBottom = false;
+            hitBar = false;
+            hitWall = false;
+        }
+        if (ball.top > (bar.top - 50) && hitBar) {
+            checkLeft = false;
+            checkRight = true;
+            checkTop = false;
+            checkBottom = true;
+            hitWall = true;
+        }
+        if (ball.top < 0) {
+            if (!hitWall) {
+                checkLeft = true;
+                checkRight = false;
+                checkTop = true;
+                checkBottom = false;
+                hitBar = false;
+                hitWall = false;
+            } else {
+                checkBar = false;
+            }
+        }
+    }
+
+    function moveBallRight() {
+        if (ball.left < 0) {
+            checkLeft = true;
+            checkRight = false;
+            checkTop = true;
+            checkBottom = false;
+            hitBar = false;
+            hitWall = true;
+        }
+        if (ball.left > gameBoard.width) {
+            checkLeft = false;
+            checkRight = true;
+            checkTop = false;
+            checkBottom = true;
+            hitBar = false;
+            hitWall = true;
+        }
+        if (ball.top > (bar.top - 50) && hitBar) {
+            checkLeft = true;
+            checkRight = false;
+            checkTop = false;
+            checkBottom = true;
+            hitWall = false;
+        }
+        if (ball.top < 0) {
+            if (hitWall) {
+                checkLeft = false;
+                checkRight = true;
+                checkTop = true;
+                checkBottom = false;
+                hitBar = false;
+            } else {
+                checkBar = true;
+            }
+        }
+    }
+
+    function moveBar(event) {
+        switch (event.keyCode) {
+            case 37:
+                bar.moveLeft();
+                break;
+            case 39:
+                bar.moveRight();
+                break;
+        }
+    }
+
+    function barReady() {
+        window.addEventListener('keydown', moveBar)
+    }
+
+    let gameBoard = new GameBoard(1000, 600);
+    let ball = new Ball(200, 100, 1);
+    let bar = new Bar(400, 400)
+    let checkLeft = true;
+    let checkRight = false;
+    let checkTop = true;
+    let checkBottom = false;
+    let checkBar = false;
+    let hitBar = false;
+    let hitWall = false;
+    play();
+</script>
+</body>
+</html>
